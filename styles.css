@@ -1820,4 +1820,10 @@ body {
   .xl\:\!text-\[40px\] {
     font-size: 40px !important;
   }
+
+  .carousel-item img {
+    object-fit: cover;
+  }
+  
 }
+
