@@ -881,6 +881,10 @@ select {
   height: 100%;
 }
 
+.h-custom-landing {
+  height: 65rem;
+}
+
 .\!min-h-0 {
   min-height: 0px !important;
 }
@@ -1094,15 +1098,25 @@ select {
   background-color: rgb(42 86 92 / 0.1);
 }
 
+.bg-\[\#9ECEBF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(158 206 191 / var(--tw-bg-opacity));
+}
+
+/*  */
+
+.bg-\[\#E1EDEA\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 237 234 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#2E565B\] {
   --tw-bg-opacity: 1;
   background-color: rgb(46 86 91 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#9ECEBF\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(158 206 191 / var(--tw-bg-opacity));
-}
+/*  */
+
 
 .bg-\[\#EEC173\] {
   --tw-bg-opacity: 1;
@@ -1279,6 +1293,12 @@ select {
 .text-\[\#2A565A\] {
   --tw-text-opacity: 1;
   color: rgb(42 86 90 / var(--tw-text-opacity));
+}
+
+
+.text-\[\#2E565B\] {
+  --tw-text-opacity: 1;
+  color: rgb(46 86 91 / var(--tw-text-opacity));
 }
 
 .text-\[\#365E5D\] {
@@ -1823,6 +1843,8 @@ body {
 
   .carousel-item img {
     object-fit: cover;
+    /* height: 100%;
+    width: 100%; */
   }
   
 }
