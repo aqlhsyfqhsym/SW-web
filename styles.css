@@ -1115,6 +1115,11 @@ select {
   background-color: rgb(46 86 91 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#D6EDE7\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 237 231 / var(--tw-bg-opacity));
+}
+
 /*  */
 
 
