@@ -885,6 +885,20 @@ select {
   height: 65rem;
 }
 
+.h-w-custom-plan {
+  height: 50rem;
+  width: 70rem;
+}
+
+.button-custom {
+  color: #F57921 !important;
+  /* background-color: #F57921 !important; */
+}
+
+.section-gated {
+  padding: 40px 50px 30px 85px;
+}
+
 .\!min-h-0 {
   min-height: 0px !important;
 }
@@ -1818,7 +1832,7 @@ body {
   }
 
   .xl\:w-1\/2 {
-    width: 50%;
+    width: 60%;
   }
 
   .xl\:w-2\/5 {
