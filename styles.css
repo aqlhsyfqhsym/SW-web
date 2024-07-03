@@ -1903,3 +1903,22 @@ body {
 .active {
   display: block !important;
 }
+
+.background-section {
+  background-image: url('./assets/perks/bg-yellow.png');
+  background-size: cover; /* Ensures the background image covers the entire section */
+  background-position: center; /* Centers the background image */
+  min-height:50vh; /* Sets the minimum height of the section to 100% of the viewport height */
+  position: relative;
+  height: 120vh;
+}
+
+/* Optional: Hide the img tag if you don't need to display it separately */
+/* .background-section img {
+  display: none;
+} */
+
+
+.text-perks {
+      width: 35rem;
+}
