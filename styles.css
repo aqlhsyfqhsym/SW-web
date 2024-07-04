@@ -1894,14 +1894,11 @@ body {
   background-color: #F57921 !important;
 }
 
-.hidden {
+.content-slider .content {
   display: none;
 }
-.block {
+.content-slider .content.active {
   display: block;
-}
-.active {
-  display: block !important;
 }
 
 .background-section {
@@ -1922,3 +1919,4 @@ body {
 .text-perks {
       width: 35rem;
 }
+
