@@ -1920,3 +1920,38 @@ body {
       width: 35rem;
 }
 
+.bg-gradient {
+  background: linear-gradient(to right, #84C5A2, #D5DD39);
+}
+
+.bg-custom-gradient {
+  --tw-bg-opacity: 1;
+  background-image: linear-gradient(to right, rgba(132, 197, 162, var(--tw-bg-opacity)), rgba(213, 221, 57, var(--tw-bg-opacity)));
+}
+
+.slick-slide {
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 40px;
+}
+
+/* Adjust the width of the slide container to account for the added margin */
+.slick-list {
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  border-radius: 40px;
+}
+
+.slick-slide {
+  transition: transform 0.05s ease;
+}
+.slick-center img {
+  transform: scale(0.9); /* Scale up the center slide */
+}
+.slick-slide:not(.slick-center) img {
+  transform: scale(0.8); /* Scale down the non-center slides */
+}
