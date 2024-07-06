@@ -13,6 +13,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
+
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
@@ -22,14 +28,16 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 
+
 </head>
 
 <body class="">
+
+
   <header class="w-full bg-[#2E565B] md:h-[55px]">
     <div class="w-full md:hidden flex flex-row justify-end items-center px-4 py-2 relative">
       <button id="menu-btn">
         <svg xmlns="http://www.w3.org/2000/svg" class="fill-white h-8" viewBox="0 0 448 512">
-          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
           <path
             d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
         </svg>
@@ -44,11 +52,23 @@
             <a href="#master-plan">MASTER PLAN</a>
           </li>
           <li class="uppercase text-white !px-0 mobile-link">
+            <a href="#features">FEATURES</a>
+          </li>
+          <li class="uppercase text-white !px-0 mobile-link">
+            <a href="#floor-plan">FLOOR PLANS</a>
+          </li>
+          <li class="uppercase text-white !px-0 mobile-link">
+            <a href="#gallery">GALLERY</a>
+          </li>
+          <li class="uppercase text-white !px-0 mobile-link">
             <a href="#location-map">LOCATION</a>
           </li>
           <li class="uppercase text-white !px-0 mobile-link">
-            <a href="#enquiry">ENQUIRY</a>
+            <a href="#registration">REGISTRATION</a>
           </li>
+          <!-- <li class="uppercase text-white !px-0 mobile-link">
+            <a href="#enquiry">ENQUIRY</a>
+          </li> -->
         </ul>
       </nav>
     </div>
@@ -56,14 +76,23 @@
       <ul class="flex flex-row justify-center items-center ">
         <li class="nav-link"><a href="#home">HOME</a></li>
         <li class="nav-link"><a href="#master-plan">MASTER PLAN</a></li>
+        <li class="nav-link"><a href="#features">FEATURES</a></li>
+        <li class="nav-link"><a href="#floor-plan">FLOOR PLANS</a></li>
+        <li class="nav-link"><a href="#gallery">GALLERY</a></li>
         <li class="nav-link"><a href="#location-map">LOCATION</a></li>
-        <li class="nav-link"><a href="#enquiry">ENQUIRY</a></li>
+        <li class="nav-link"><a href="#registration">REGISTRATION</a></li>
+        <li class="nav-link">
+          <a href="#home">
+            <img src="./assets/icon/Union.png" alt="Home Logo">
+          </a>
+        </li>
+        <!-- <li class="nav-link"><a href="#enquiry">ENQUIRY</a></li> -->
       </ul>
     </nav>
   </header>
 
 
-<!-- SECTION 1 -->
+  <!-- SECTION 1 -->
 
 
   <!-- <img id="home" class="object-cover w-full h-full object-top aspect-[1920/1080] -mb-[1px]"
@@ -71,306 +100,322 @@
     alt="A home for all generations. Me & We.
     Experience multi-generational living in our flexi-home, with shared spaces for family and tranquil personal nooks." /> -->
 
-    <div id="controls-carousel" class="relative h-full w-full " data-carousel="static">
-      <div class="relative h-custom-landing overflow-hidden rounded-lg">
-          <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item>
-              <img src="./assets/landing/landing-img3.png" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-          </div>
-          <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item="active">
-              <img src="./assets/landing/landing-img1.png" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-          </div>
-          <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item>
-              <img src="./assets/landing/landing-img2.png" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-          </div>
+  <div id="controls-carousel" class="relative h-full w-full " data-carousel="static">
+    <div class="relative h-custom-landing overflow-hidden rounded-lg">
+      <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item>
+        <img src="./assets/landing/landing-img3.png"
+          class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="...">
       </div>
-      <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-              <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-              </svg>
-              <span class="sr-only">Previous</span>
-          </span>
-      </button>
-      <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-              <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-              </svg>
-              <span class="sr-only">Next</span>
-          </span>
-      </button>
+      <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item="active">
+        <img src="./assets/landing/landing-img1.png"
+          class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="...">
+      </div>
+      <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item>
+        <img src="./assets/landing/landing-img2.png"
+          class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="...">
+      </div>
+    </div>
+    <button type="button"
+      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-prev>
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M5 1 1 5l4 4" />
+        </svg>
+        <span class="sr-only">Previous</span>
+      </span>
+    </button>
+    <button type="button"
+      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+      data-carousel-next>
+      <span
+        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m1 9 4-4-4-4" />
+        </svg>
+        <span class="sr-only">Next</span>
+      </span>
+    </button>
   </div>
 
-<!-- SECTION 2 -->
+  <!-- SECTION 2 -->
 
-<section class="sections" id="master-plan">
-  <h2 class="text-[#2A565A] w-[90%] md:w-1/2 section-heading">
-    Part Of A Bigger Picture
-  </h2>
-  <p class="w-2/3 text-center font-medium xl:px-10">
-    A masterplan that has since unveiled a vibrant tapestry of success. Join
-    our thriving community where each precinct contributes to a harmonious
-    blend of diverse property offerings, that when combined, delivers a
-    comprehensive, practical and modern living experience.
-  </p>
-  <div class="w-4/5 flex flex-col lg:flex-row justify-start items-start lg:items-center gap-10">
-    <div class="relative flex-auto">
-      <img src="./assets/masterplan/master-plan.png" alt="" />
-      <img src="./assets/masterplan/compass.png" alt="" class="absolute right-[10%] top-[60%] w-4 lg:w-6" />
+  <section class="sections" id="master-plan">
+    <h2 class="text-[#2A565A] w-[90%] md:w-1/2 section-heading">
+      Part Of A Bigger Picture
+    </h2>
+    <p class="w-2/3 text-center font-medium xl:px-10">
+      A masterplan that has since unveiled a vibrant tapestry of success. Join
+      our thriving community where each precinct contributes to a harmonious
+      blend of diverse property offerings, that when combined, delivers a
+      comprehensive, practical and modern living experience.
+    </p>
+    <div class="w-4/5 flex flex-col lg:flex-row justify-start items-start lg:items-center gap-10">
+      <div class="relative flex-auto">
+        <img src="./assets/masterplan/master-plan.png" alt="" />
+        <img src="./assets/masterplan/compass.png" alt="" class="absolute right-[10%] top-[60%] w-4" />
+      </div>
+      <div class="lg:w-1/3 xl:flex flex-col gap-5 w-full overflow-hidden grid grid-cols-3 lg:max-w-72">
+        <img src="./assets/masterplan/legend-1.png" alt="" class="object-contain aspect-auto w-auto h-auto shrink" />
+        <img src="./assets/masterplan/legend-2.png" alt="" class="object-contain aspect-auto w-auto h-auto shrink" />
+        <img src="./assets/masterplan/legend-3.png" alt="" class="object-contain aspect-auto w-auto h-auto shrink" />
+      </div>
     </div>
-    <div class="lg:w-1/3 xl:flex flex-col gap-5 w-full overflow-hidden grid grid-cols-3 lg:max-w-72">
-      <img src="./assets/masterplan/legend-1.png" alt="" class="object-contain aspect-auto w-auto h-auto shrink" />
-      <img src="./assets/masterplan/legend-2.png" alt="" class="object-contain aspect-auto w-auto h-auto shrink" />
-      <img src="./assets/masterplan/legend-3.png" alt="" class="object-contain aspect-auto w-auto h-auto shrink" />
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- SECTION 3 -->
+  <!-- SECTION 3 -->
 
-<section class="bg-[#9ECEBF] text-[#365E5D] sections">
-  <h2 class="section-heading md:w-2/3 xl:w-2/5 md:!leading-[65px]">
-    A Lifestyle Home
-    <br />
-    With Many Excitements
-  </h2>
-  <p class="section-subheading">
-    Step into an extraordinary living experience at Sunway Wellesley - a
-    thoughtfully designed community boasting cutting-edge features for the
-    modern urbanite. Choose to come home to Sunway Wellesley, where
-    exceptional features redefine your everyday living.
-  </p>
-  <div class="icons">
-    <div class="icon-group">
-      <svg width="87" height="113" viewBox="0 0 87 113" fill="none" class="icon" xmlns="http://www.w3.org/2000/svg">
-        <path d="M28.2617 103.008H65.0047" stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10"
-          stroke-linecap="round" stroke-linejoin="round" />
-        <path
-          d="M62.0498 20.9626V42.2771C62.0498 45.543 59.0418 48.1908 55.3309 48.1908H44.9357C41.2253 48.1908 38.2168 45.543 38.2168 42.2771V25.2658"
-          stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10" stroke-linecap="round"
-          stroke-linejoin="round" />
-        <path d="M70.4889 111.338H29.0264L23.9355 65.3796" stroke="#2E565B" stroke-width="2.63961"
-          stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M30.8223 111.337H72.2848L77.3849 65.2915" stroke="#2E565B" stroke-width="2.63961"
-          stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M85.1172 65.3765V111.336" stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10"
-          stroke-linecap="round" stroke-linejoin="round" />
-        <path
-          d="M85.1168 65.3778C85.1168 60.3143 80.4533 56.2098 74.7008 56.2098H6.56625C4.69041 56.2098 2.95858 55.4253 2.03895 54.1575C1.11701 52.8878 1.14942 51.3329 2.11999 50.0882L19.9796 27.2086C20.9215 26.0018 22.6088 25.2646 24.4259 25.2646H31.2147"
-          stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10" stroke-linecap="round"
-          stroke-linejoin="round" />
-        <path d="M28.332 31.0994L15.2103 47.9101" stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10"
-          stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M25.8398 31.0994H36.8694" stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10"
-          stroke-linecap="round" stroke-linejoin="round" />
-        <path
-          d="M71.166 9.59888L62.4333 7.35585C55.1394 5.48239 47.3887 5.48234 40.0942 7.35597L31.3615 9.59883L35.0766 15.4625"
-          stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10" stroke-linecap="round"
-          stroke-linejoin="round" />
-        <path d="M63.9565 15.4634H35.0785L32.2108 20.9631H66.8242L63.9565 15.4634Z" stroke="#2E565B"
-          stroke-width="2.63961" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-        <path
-          d="M70.4895 65.3799V74.3572C70.4895 77.4805 64.0651 80.012 64.0651 80.012C64.0651 80.012 57.6406 77.4805 57.6406 74.3572V65.3799H70.4895Z"
-          stroke="white" stroke-width="3.07955" stroke-miterlimit="10" stroke-linecap="round"
-          stroke-linejoin="round" />
-      </svg>
+  <section class="bg-[#9ECEBF] text-[#365E5D] sections">
+    <h2 class="section-heading md:w-2/3 xl:w-2/5 md:!leading-[65px]">
+      A Lifestyle Home
+      <br />
+      With Many Excitements
+    </h2>
+    <p class="section-subheading">
+      Step into an extraordinary living experience at Sunway Wellesley - a
+      thoughtfully designed community boasting cutting-edge features for the
+      modern urbanite. Choose to come home to Sunway Wellesley, where
+      exceptional features redefine your everyday living.
+    </p>
+    <div class="icons">
+      <div class="icon-group">
+        <svg width="87" height="113" viewBox="0 0 87 113" fill="none" class="icon" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28.2617 103.008H65.0047" stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10"
+            stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M62.0498 20.9626V42.2771C62.0498 45.543 59.0418 48.1908 55.3309 48.1908H44.9357C41.2253 48.1908 38.2168 45.543 38.2168 42.2771V25.2658"
+            stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M70.4889 111.338H29.0264L23.9355 65.3796" stroke="#2E565B" stroke-width="2.63961"
+            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M30.8223 111.337H72.2848L77.3849 65.2915" stroke="#2E565B" stroke-width="2.63961"
+            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M85.1172 65.3765V111.336" stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10"
+            stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M85.1168 65.3778C85.1168 60.3143 80.4533 56.2098 74.7008 56.2098H6.56625C4.69041 56.2098 2.95858 55.4253 2.03895 54.1575C1.11701 52.8878 1.14942 51.3329 2.11999 50.0882L19.9796 27.2086C20.9215 26.0018 22.6088 25.2646 24.4259 25.2646H31.2147"
+            stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M28.332 31.0994L15.2103 47.9101" stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10"
+            stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M25.8398 31.0994H36.8694" stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10"
+            stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M71.166 9.59888L62.4333 7.35585C55.1394 5.48239 47.3887 5.48234 40.0942 7.35597L31.3615 9.59883L35.0766 15.4625"
+            stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M63.9565 15.4634H35.0785L32.2108 20.9631H66.8242L63.9565 15.4634Z" stroke="#2E565B"
+            stroke-width="2.63961" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M70.4895 65.3799V74.3572C70.4895 77.4805 64.0651 80.012 64.0651 80.012C64.0651 80.012 57.6406 77.4805 57.6406 74.3572V65.3799H70.4895Z"
+            stroke="white" stroke-width="3.07955" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
 
-      <p>
-        Gated &amp; Guarded
-        <br />
-        Landed Residential
-      </p>
-    </div>
-    <div class="icon-group">
-      <svg width="107" height="107" viewBox="0 0 107 107" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
-        <path
-          d="M2.15139 28.6974C3.29977 28.6974 4.23051 27.7666 4.23051 26.6183V4.16606H26.6827C27.8311 4.16606 28.7618 3.23531 28.7618 2.08693C28.7618 0.938555 27.8311 0.0078125 26.6827 0.0078125H2.15139C1.00301 0.0078125 0.0722656 0.938555 0.0722656 2.08693V26.6183C0.0722656 27.7666 1.00301 28.6974 2.15139 28.6974Z"
-          fill="white" />
-        <path
-          d="M104.431 0.00927734H79.8994C78.7511 0.00927734 77.8203 0.940021 77.8203 2.0884C77.8203 3.23632 78.7511 4.16706 79.8994 4.16706H102.352V26.6197C102.352 27.7681 103.282 28.6988 104.431 28.6988C105.579 28.6988 106.51 27.7681 106.51 26.6197V2.0884C106.51 0.940021 105.579 0.00927734 104.431 0.00927734Z"
-          fill="white" />
-        <path
-          d="M26.6788 102.291H4.22614V79.8387C4.22614 78.6903 3.2954 77.76 2.14748 77.76C0.999101 77.76 0.0683594 78.6903 0.0683594 79.8387V104.37C0.0683594 105.518 0.999101 106.449 2.14748 106.449H26.6788C27.8272 106.449 28.7579 105.518 28.7579 104.37C28.7579 103.222 27.8272 102.291 26.6788 102.291Z"
-          fill="white" />
-        <path
-          d="M79.9033 102.292C79.3569 102.292 78.8198 102.515 78.4336 102.901C78.0469 103.288 77.8242 103.825 77.8242 104.372C77.8242 104.918 78.0469 105.455 78.4336 105.841C78.8198 106.228 79.3569 106.45 79.9033 106.45C80.4497 106.45 80.9864 106.228 81.3731 105.841C81.7597 105.455 81.9825 104.918 81.9825 104.372C81.9825 103.825 81.7597 103.288 81.3731 102.901C80.9864 102.515 80.4497 102.292 79.9033 102.292Z"
-          fill="white" />
-        <path
-          d="M104.432 77.7607C103.283 77.7607 102.352 78.6915 102.352 79.8399V102.292H88.2158C87.0675 102.292 86.1367 103.223 86.1367 104.371C86.1367 105.52 87.0675 106.45 88.2158 106.45H104.432C105.58 106.45 106.511 105.52 106.511 104.371V79.8399C106.511 78.6915 105.58 77.7607 104.432 77.7607Z"
-          fill="white" />
-        <path
-          d="M102.356 66.6325H79.9023V55.4034H102.356V66.6325ZM66.2652 60.2609C67.3627 59.006 68.0619 57.3899 68.1592 55.6164L75.744 58.1539V63.7477L66.2652 60.2609ZM39.4682 73.245L14.0372 61.4231L28.0354 47.4296L46.6595 66.0537L39.4682 73.245ZM27.7575 74.8193C26.2387 75.3704 24.5948 75.2963 23.1316 74.611C21.6729 73.9256 20.5616 72.7124 20.0106 71.1935C19.7096 70.36 19.5984 69.4849 19.6725 68.6282L29.9709 73.4162C29.3504 74.0321 28.6003 74.5137 27.7575 74.8193ZM52.142 23.3182C54.6286 20.8316 57.9395 19.4609 61.4541 19.4609C64.9733 19.4609 68.2795 20.8316 70.7708 23.3182C73.2574 25.8048 74.628 29.1156 74.628 32.6302C74.628 36.1495 73.2574 39.4604 70.7708 41.947L64.237 48.476C63.1164 47.8462 61.8292 47.4851 60.4585 47.4851C56.2077 47.4851 52.744 50.9441 52.744 55.1949C52.744 56.5702 53.1052 57.8576 53.7396 58.9735L49.5998 63.1132L37.8799 51.3933L51.378 37.8906C52.1929 37.0756 52.1929 35.7605 51.378 34.9501C50.5676 34.1398 49.2526 34.1398 48.4376 34.9501L34.9395 48.4529L30.9757 44.4845L52.142 23.3182ZM56.9023 55.1949C56.9023 53.2362 58.4998 51.6433 60.4585 51.6433C62.4173 51.6433 64.0102 53.2362 64.0102 55.1949C64.0102 57.1583 62.4173 58.7513 60.4585 58.7513C58.4998 58.7513 56.9023 57.1583 56.9023 55.1949ZM104.435 51.2452H77.8231C76.6748 51.2452 75.744 52.1759 75.744 53.3243V53.7688L67.7285 51.0877C67.6729 51.0692 67.6127 51.0552 67.5525 51.0413L73.7066 44.8873C80.4672 38.1267 80.4672 27.1338 73.7066 20.3778C66.9506 13.6218 55.9576 13.6218 49.2016 20.3778L8.99449 60.585C8.51292 61.0666 8.29991 61.7519 8.41567 62.4187C8.53607 63.0855 8.9713 63.655 9.58716 63.9421L15.7597 66.8084C15.3106 68.7208 15.4171 70.7213 16.1024 72.6105C17.0331 75.1712 18.9039 77.2225 21.372 78.3756C22.7472 79.0192 24.2151 79.3434 25.6876 79.3434C26.8638 79.3434 28.0353 79.1396 29.1698 78.7275C31.0776 78.0375 32.6983 76.8243 33.8791 75.2314L39.0376 77.6301C39.3154 77.7598 39.6164 77.8199 39.9128 77.8199C40.4499 77.8199 40.9824 77.6115 41.3806 77.2133L56.68 61.9139C57.796 62.5483 59.0833 62.9095 60.4585 62.9095C60.7364 62.9095 61.0142 62.891 61.2874 62.8632L75.744 68.1744V68.7116C75.744 69.8554 76.6748 70.7907 77.8231 70.7907H104.435C105.583 70.7907 106.514 69.8554 106.514 68.7116V53.3243C106.514 52.1759 105.583 51.2452 104.435 51.2452Z"
-          fill="#2E565B" />
-        <path
-          d="M55.792 32.6158C56.3384 32.6158 56.8751 32.3935 57.2618 32.0069C57.6484 31.6193 57.8711 31.0835 57.8711 30.5367C57.8711 29.9903 57.6484 29.4536 57.2618 29.0669C56.8751 28.6803 56.3384 28.458 55.792 28.458C55.2428 28.458 54.7085 28.6803 54.3223 29.0669C53.9356 29.4536 53.7129 29.9903 53.7129 30.5367C53.7129 31.0835 53.9356 31.6202 54.3223 32.0069C54.7085 32.3935 55.2456 32.6158 55.792 32.6158Z"
-          fill="#2E565B" />
-      </svg>
+        <p>
+          Gated &amp; Guarded
+          <br />
+          Landed Residential
+        </p>
+      </div>
+      <div class="icon-group">
+        <svg width="107" height="107" viewBox="0 0 107 107" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+          <path
+            d="M2.15139 28.6974C3.29977 28.6974 4.23051 27.7666 4.23051 26.6183V4.16606H26.6827C27.8311 4.16606 28.7618 3.23531 28.7618 2.08693C28.7618 0.938555 27.8311 0.0078125 26.6827 0.0078125H2.15139C1.00301 0.0078125 0.0722656 0.938555 0.0722656 2.08693V26.6183C0.0722656 27.7666 1.00301 28.6974 2.15139 28.6974Z"
+            fill="white" />
+          <path
+            d="M104.431 0.00927734H79.8994C78.7511 0.00927734 77.8203 0.940021 77.8203 2.0884C77.8203 3.23632 78.7511 4.16706 79.8994 4.16706H102.352V26.6197C102.352 27.7681 103.282 28.6988 104.431 28.6988C105.579 28.6988 106.51 27.7681 106.51 26.6197V2.0884C106.51 0.940021 105.579 0.00927734 104.431 0.00927734Z"
+            fill="white" />
+          <path
+            d="M26.6788 102.291H4.22614V79.8387C4.22614 78.6903 3.2954 77.76 2.14748 77.76C0.999101 77.76 0.0683594 78.6903 0.0683594 79.8387V104.37C0.0683594 105.518 0.999101 106.449 2.14748 106.449H26.6788C27.8272 106.449 28.7579 105.518 28.7579 104.37C28.7579 103.222 27.8272 102.291 26.6788 102.291Z"
+            fill="white" />
+          <path
+            d="M79.9033 102.292C79.3569 102.292 78.8198 102.515 78.4336 102.901C78.0469 103.288 77.8242 103.825 77.8242 104.372C77.8242 104.918 78.0469 105.455 78.4336 105.841C78.8198 106.228 79.3569 106.45 79.9033 106.45C80.4497 106.45 80.9864 106.228 81.3731 105.841C81.7597 105.455 81.9825 104.918 81.9825 104.372C81.9825 103.825 81.7597 103.288 81.3731 102.901C80.9864 102.515 80.4497 102.292 79.9033 102.292Z"
+            fill="white" />
+          <path
+            d="M104.432 77.7607C103.283 77.7607 102.352 78.6915 102.352 79.8399V102.292H88.2158C87.0675 102.292 86.1367 103.223 86.1367 104.371C86.1367 105.52 87.0675 106.45 88.2158 106.45H104.432C105.58 106.45 106.511 105.52 106.511 104.371V79.8399C106.511 78.6915 105.58 77.7607 104.432 77.7607Z"
+            fill="white" />
+          <path
+            d="M102.356 66.6325H79.9023V55.4034H102.356V66.6325ZM66.2652 60.2609C67.3627 59.006 68.0619 57.3899 68.1592 55.6164L75.744 58.1539V63.7477L66.2652 60.2609ZM39.4682 73.245L14.0372 61.4231L28.0354 47.4296L46.6595 66.0537L39.4682 73.245ZM27.7575 74.8193C26.2387 75.3704 24.5948 75.2963 23.1316 74.611C21.6729 73.9256 20.5616 72.7124 20.0106 71.1935C19.7096 70.36 19.5984 69.4849 19.6725 68.6282L29.9709 73.4162C29.3504 74.0321 28.6003 74.5137 27.7575 74.8193ZM52.142 23.3182C54.6286 20.8316 57.9395 19.4609 61.4541 19.4609C64.9733 19.4609 68.2795 20.8316 70.7708 23.3182C73.2574 25.8048 74.628 29.1156 74.628 32.6302C74.628 36.1495 73.2574 39.4604 70.7708 41.947L64.237 48.476C63.1164 47.8462 61.8292 47.4851 60.4585 47.4851C56.2077 47.4851 52.744 50.9441 52.744 55.1949C52.744 56.5702 53.1052 57.8576 53.7396 58.9735L49.5998 63.1132L37.8799 51.3933L51.378 37.8906C52.1929 37.0756 52.1929 35.7605 51.378 34.9501C50.5676 34.1398 49.2526 34.1398 48.4376 34.9501L34.9395 48.4529L30.9757 44.4845L52.142 23.3182ZM56.9023 55.1949C56.9023 53.2362 58.4998 51.6433 60.4585 51.6433C62.4173 51.6433 64.0102 53.2362 64.0102 55.1949C64.0102 57.1583 62.4173 58.7513 60.4585 58.7513C58.4998 58.7513 56.9023 57.1583 56.9023 55.1949ZM104.435 51.2452H77.8231C76.6748 51.2452 75.744 52.1759 75.744 53.3243V53.7688L67.7285 51.0877C67.6729 51.0692 67.6127 51.0552 67.5525 51.0413L73.7066 44.8873C80.4672 38.1267 80.4672 27.1338 73.7066 20.3778C66.9506 13.6218 55.9576 13.6218 49.2016 20.3778L8.99449 60.585C8.51292 61.0666 8.29991 61.7519 8.41567 62.4187C8.53607 63.0855 8.9713 63.655 9.58716 63.9421L15.7597 66.8084C15.3106 68.7208 15.4171 70.7213 16.1024 72.6105C17.0331 75.1712 18.9039 77.2225 21.372 78.3756C22.7472 79.0192 24.2151 79.3434 25.6876 79.3434C26.8638 79.3434 28.0353 79.1396 29.1698 78.7275C31.0776 78.0375 32.6983 76.8243 33.8791 75.2314L39.0376 77.6301C39.3154 77.7598 39.6164 77.8199 39.9128 77.8199C40.4499 77.8199 40.9824 77.6115 41.3806 77.2133L56.68 61.9139C57.796 62.5483 59.0833 62.9095 60.4585 62.9095C60.7364 62.9095 61.0142 62.891 61.2874 62.8632L75.744 68.1744V68.7116C75.744 69.8554 76.6748 70.7907 77.8231 70.7907H104.435C105.583 70.7907 106.514 69.8554 106.514 68.7116V53.3243C106.514 52.1759 105.583 51.2452 104.435 51.2452Z"
+            fill="#2E565B" />
+          <path
+            d="M55.792 32.6158C56.3384 32.6158 56.8751 32.3935 57.2618 32.0069C57.6484 31.6193 57.8711 31.0835 57.8711 30.5367C57.8711 29.9903 57.6484 29.4536 57.2618 29.0669C56.8751 28.6803 56.3384 28.458 55.792 28.458C55.2428 28.458 54.7085 28.6803 54.3223 29.0669C53.9356 29.4536 53.7129 29.9903 53.7129 30.5367C53.7129 31.0835 53.9356 31.6202 54.3223 32.0069C54.7085 32.3935 55.2456 32.6158 55.792 32.6158Z"
+            fill="#2E565B" />
+        </svg>
 
-      <p>
-        7ft High Perimeter Fencing
-        <br />
-        with CCTV Surveillance
-      </p>
-    </div>
-    <div class="icon-group">
-      <svg width="111" height="113" viewBox="0 0 111 113" fill="none" class="icon" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M57.721 3.19265C52.3427 3.19265 47.9654 8.37981 47.9654 14.7552V30.8978C47.9654 37.2726 52.3427 42.4598 57.721 42.4598C63.0999 42.4598 67.4767 37.2726 67.4767 30.8978V14.7552C67.4767 8.37981 63.0999 3.19265 57.721 3.19265ZM57.721 44.996C50.9438 44.996 45.4297 38.6711 45.4297 30.8978V14.7552C45.4297 6.98184 50.9438 0.656494 57.721 0.656494C64.4983 0.656494 70.0129 6.98184 70.0129 14.7552V30.8978C70.0129 38.6711 64.4983 44.996 57.721 44.996Z"
-          fill="#2E565B" />
-        <path
-          d="M40.587 54.067H19.3665C19.2929 54.067 19.2192 54.06 19.147 54.0475C18.0699 53.8581 16.5284 53.4627 15.5842 52.2161C14.1298 50.2958 15.055 47.7833 15.6671 46.1218C15.7607 45.8676 15.85 45.6273 15.9246 45.4041C16.1913 44.6067 17.2624 41.3172 18.6177 37.1571C22.3833 25.5992 25.7928 15.1513 26.1461 14.2585C26.5716 13.1833 27.5765 10.7036 29.9769 10.7638C30.0177 10.7629 30.0571 10.762 30.0973 10.762C32.4242 10.762 33.3897 13.2013 33.8087 14.2594C34.163 15.1554 37.5914 25.6636 41.3788 37.2872C42.7138 41.3857 43.7663 44.6151 44.0293 45.405C44.1039 45.6255 44.1923 45.8658 44.2849 46.1181C44.4688 46.6159 44.6767 47.1799 44.841 47.7703C45.03 48.4445 44.6355 49.1438 43.9608 49.3318C43.288 49.5221 42.5864 49.1262 42.3994 48.4524C42.2614 47.9606 42.0803 47.4703 41.9057 46.9952C41.8029 46.7169 41.7057 46.4529 41.6237 46.2084C41.3598 45.4166 40.3059 42.1799 38.9676 38.073C36.2889 29.8505 31.8056 16.0894 31.4509 15.1925C31.2068 14.5748 30.7002 13.2986 30.0742 13.2986C30.0427 13.2995 30.0103 13.3014 29.9769 13.3014C29.945 13.3014 29.9112 13.2981 29.8811 13.2986C29.2537 13.2986 28.7485 14.5748 28.504 15.1925C28.1502 16.0857 23.6928 29.7672 21.0289 37.942C19.6712 42.1113 18.596 45.4087 18.3302 46.2084C18.2482 46.4534 18.15 46.7187 18.0472 46.9984C17.5749 48.2778 16.9882 49.8712 17.605 50.6839C17.8991 51.0719 18.5131 51.3493 19.4804 51.5308H40.587C41.2871 51.5308 41.8553 52.099 41.8553 52.7991C41.8553 53.4993 41.2871 54.067 40.587 54.067Z"
-          fill="#2E565B" />
-        <path
-          d="M89.6176 28.1265C83.54 28.1265 78.3431 32.4649 77.2582 38.4425C77.1665 38.9518 76.7743 39.3528 76.2673 39.458C71.6358 40.4165 68.2735 44.5493 68.2735 49.2859C68.2735 54.8208 72.7767 59.324 78.3116 59.324H99.1612C99.2066 59.317 99.2529 59.3133 99.3001 59.3124C103.031 59.1976 105.955 56.1854 105.955 52.4559C105.955 49.8383 104.493 47.4846 102.14 46.3126C101.57 46.0297 101.299 45.3679 101.506 44.7674C101.96 43.4365 102.191 42.0682 102.191 40.7003C102.191 33.767 96.5505 28.1265 89.6176 28.1265ZM99.339 61.8597H78.3116C71.3788 61.8597 65.7383 56.2192 65.7383 49.2859C65.7383 43.6357 69.5585 38.6712 74.935 37.1728C76.5469 30.414 82.594 25.5908 89.6176 25.5908C97.9494 25.5908 104.727 32.3686 104.727 40.7003C104.727 42.0029 104.553 43.3041 104.212 44.5798C106.876 46.3047 108.491 49.234 108.491 52.4559C108.491 57.5019 104.585 61.5883 99.5641 61.8393C99.4909 61.8523 99.4163 61.8597 99.339 61.8597Z"
-          fill="#2E565B" />
-        <path
-          d="M29.9749 80.1513C29.2752 80.1513 28.707 79.5831 28.707 78.8834V38.6665C28.707 37.9664 29.2752 37.3987 29.9749 37.3987C30.675 37.3987 31.2432 37.9664 31.2432 38.6665V78.8834C31.2432 79.5831 30.675 80.1513 29.9749 80.1513Z"
-          fill="#2E565B" />
-        <path
-          d="M57.7195 80.1503C57.0193 80.1503 56.4512 79.5821 56.4512 78.8825V30.4241C56.4512 29.724 57.0193 29.1562 57.7195 29.1562C58.4192 29.1562 58.9873 29.724 58.9873 30.4241V78.8825C58.9873 79.5821 58.4192 80.1503 57.7195 80.1503Z"
-          fill="#2E565B" />
-        <path
-          d="M48.1068 47.5411C45.2831 47.5411 42.9849 49.8383 42.9849 52.6615C42.9849 55.4857 45.2831 57.7825 48.1068 57.7825C50.9296 57.7825 53.2273 55.4857 53.2273 52.6615C53.2273 49.8383 50.9296 47.5411 48.1068 47.5411ZM48.1068 60.3186C43.8842 60.3186 40.4492 56.8841 40.4492 52.6615C40.4492 48.4399 43.8842 45.0054 48.1068 45.0054C52.328 45.0054 55.7629 48.4399 55.7629 52.6615C55.7629 56.8841 52.328 60.3186 48.1068 60.3186Z"
-          fill="#2E565B" />
-        <path
-          d="M57.3637 63.2888C57.0368 63.2888 56.7108 63.1633 56.4631 62.9132L47.2024 53.5581C46.7102 53.0603 46.7143 52.2569 47.2117 51.7642C47.7099 51.272 48.5115 51.2762 49.0046 51.773L58.2653 61.1281C58.7575 61.6259 58.7533 62.4293 58.256 62.922C58.0087 63.1665 57.6869 63.2888 57.3637 63.2888Z"
-          fill="#2E565B" />
-        <path
-          d="M87.1186 80.153C86.4185 80.153 85.8512 79.5848 85.8512 78.8852V53.2249L80.6428 48.4818C80.1251 48.0095 80.0876 47.2084 80.5585 46.6903C81.0308 46.1721 81.8342 46.1364 82.3501 46.606L87.9725 51.7269C88.2369 51.9668 88.3865 52.3081 88.3865 52.6641V78.8852C88.3865 79.5848 87.8188 80.153 87.1186 80.153Z"
-          fill="#2E565B" />
-        <path
-          d="M87.1182 53.9287C86.7265 53.9287 86.3394 53.7471 86.0912 53.4054C85.6804 52.8382 85.8059 52.0459 86.3732 51.6347L93.4297 46.5142C93.9955 46.1039 94.7897 46.2294 95.2009 46.7957C95.6116 47.3625 95.4861 48.1553 94.9193 48.5665L87.8619 53.6869C87.6378 53.8504 87.3771 53.9287 87.1182 53.9287Z"
-          fill="#2E565B" />
-        <path
-          d="M40.0608 79.083C39.7362 79.083 39.4121 78.9594 39.1639 78.7117L35.897 75.4443C35.4015 74.9493 35.4015 74.1469 35.897 73.6514C36.3925 73.1559 37.1945 73.1559 37.6895 73.6514L40.9568 76.9187C41.4527 77.4142 41.4527 78.2167 40.9568 78.7117C40.7095 78.9594 40.3849 79.083 40.0608 79.083Z"
-          fill="#2E565B" />
-        <path
-          d="M39.6482 79.083C39.3241 79.083 38.9995 78.9594 38.7518 78.7117C38.2572 78.2167 38.2572 77.4142 38.7518 76.9187L42.0196 73.6514C42.5146 73.1559 43.3166 73.1559 43.812 73.6514C44.3075 74.1469 44.3075 74.9493 43.812 75.4443L40.5452 78.7117C40.297 78.9594 39.9728 79.083 39.6482 79.083Z"
-          fill="#2E565B" />
-        <path
-          d="M68.1781 79.083C67.8535 79.083 67.5294 78.9594 67.2821 78.7116L62.1255 73.5546C61.63 73.0591 61.63 72.2576 62.1255 71.7616C62.6201 71.2666 63.4225 71.2666 63.918 71.7616L69.0746 76.9187C69.5701 77.4142 69.5701 78.2166 69.0746 78.7116C68.8273 78.9594 68.5032 79.083 68.1781 79.083Z"
-          fill="#2E565B" />
-        <path
-          d="M67.5297 79.0833C67.2051 79.0833 66.8809 78.9596 66.6337 78.7119C66.1377 78.2169 66.1377 77.4144 66.6337 76.9189L71.7903 71.7619C72.2857 71.2669 73.0877 71.2669 73.5827 71.7619C74.0782 72.2578 74.0782 73.0594 73.5827 73.5548L68.4262 78.7119C68.1784 78.9596 67.8538 79.0833 67.5297 79.0833Z"
-          fill="#2E565B" />
-        <path
-          d="M79.2663 79.083C78.9422 79.083 78.6176 78.9594 78.3694 78.7117L75.1021 75.4443C74.6066 74.9493 74.6066 74.1469 75.1021 73.6514C75.5975 73.1559 76.3996 73.1559 76.8946 73.6514L80.1633 76.9187C80.6583 77.4142 80.6583 78.2167 80.1633 78.7117C79.9155 78.9594 79.5909 79.083 79.2663 79.083Z"
-          fill="#2E565B" />
-        <path
-          d="M78.854 79.083C78.5299 79.083 78.2053 78.9594 77.9575 78.7117C77.4621 78.2167 77.4621 77.4142 77.9575 76.9187L81.2253 73.6514C81.7203 73.1559 82.5223 73.1559 83.0178 73.6514C83.5133 74.1469 83.5133 74.9493 83.0178 75.4443L79.751 78.7117C79.5028 78.9594 79.1786 79.083 78.854 79.083Z"
-          fill="#2E565B" />
-        <path
-          d="M109.296 77.9028H11.2286C6.1012 77.9028 0.125 79.8954 0.125 87.5372C0.125 95.1794 7.09538 96.7932 11.7584 96.7932H87.3402C91.1743 96.7932 95.7373 99.277 95.7373 102.988C95.7373 106.699 92.3537 109.831 87.938 109.831H47.1696C46.8788 109.831 46.6427 110.4 46.6427 111.1C46.6427 111.799 46.8788 112.368 47.1696 112.368H87.938C95.1154 112.368 98.3994 107.98 98.3994 103.087C98.3994 98.1935 93.654 94.2575 87.3402 94.2575H11.7584C10.4609 94.2575 2.89917 93.9996 2.89917 87.5038C2.89917 81.0081 9.28749 80.4385 11.2286 80.4385H109.296C109.996 80.4385 110.563 79.8708 110.563 79.1707C110.563 78.4705 109.996 77.9028 109.296 77.9028Z"
-          fill="white" />
-      </svg>
+        <p>
+          7ft High Perimeter Fencing
+          <br />
+          with CCTV Surveillance
+        </p>
+      </div>
+      <div class="icon-group">
+        <svg width="111" height="113" viewBox="0 0 111 113" fill="none" class="icon" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M57.721 3.19265C52.3427 3.19265 47.9654 8.37981 47.9654 14.7552V30.8978C47.9654 37.2726 52.3427 42.4598 57.721 42.4598C63.0999 42.4598 67.4767 37.2726 67.4767 30.8978V14.7552C67.4767 8.37981 63.0999 3.19265 57.721 3.19265ZM57.721 44.996C50.9438 44.996 45.4297 38.6711 45.4297 30.8978V14.7552C45.4297 6.98184 50.9438 0.656494 57.721 0.656494C64.4983 0.656494 70.0129 6.98184 70.0129 14.7552V30.8978C70.0129 38.6711 64.4983 44.996 57.721 44.996Z"
+            fill="#2E565B" />
+          <path
+            d="M40.587 54.067H19.3665C19.2929 54.067 19.2192 54.06 19.147 54.0475C18.0699 53.8581 16.5284 53.4627 15.5842 52.2161C14.1298 50.2958 15.055 47.7833 15.6671 46.1218C15.7607 45.8676 15.85 45.6273 15.9246 45.4041C16.1913 44.6067 17.2624 41.3172 18.6177 37.1571C22.3833 25.5992 25.7928 15.1513 26.1461 14.2585C26.5716 13.1833 27.5765 10.7036 29.9769 10.7638C30.0177 10.7629 30.0571 10.762 30.0973 10.762C32.4242 10.762 33.3897 13.2013 33.8087 14.2594C34.163 15.1554 37.5914 25.6636 41.3788 37.2872C42.7138 41.3857 43.7663 44.6151 44.0293 45.405C44.1039 45.6255 44.1923 45.8658 44.2849 46.1181C44.4688 46.6159 44.6767 47.1799 44.841 47.7703C45.03 48.4445 44.6355 49.1438 43.9608 49.3318C43.288 49.5221 42.5864 49.1262 42.3994 48.4524C42.2614 47.9606 42.0803 47.4703 41.9057 46.9952C41.8029 46.7169 41.7057 46.4529 41.6237 46.2084C41.3598 45.4166 40.3059 42.1799 38.9676 38.073C36.2889 29.8505 31.8056 16.0894 31.4509 15.1925C31.2068 14.5748 30.7002 13.2986 30.0742 13.2986C30.0427 13.2995 30.0103 13.3014 29.9769 13.3014C29.945 13.3014 29.9112 13.2981 29.8811 13.2986C29.2537 13.2986 28.7485 14.5748 28.504 15.1925C28.1502 16.0857 23.6928 29.7672 21.0289 37.942C19.6712 42.1113 18.596 45.4087 18.3302 46.2084C18.2482 46.4534 18.15 46.7187 18.0472 46.9984C17.5749 48.2778 16.9882 49.8712 17.605 50.6839C17.8991 51.0719 18.5131 51.3493 19.4804 51.5308H40.587C41.2871 51.5308 41.8553 52.099 41.8553 52.7991C41.8553 53.4993 41.2871 54.067 40.587 54.067Z"
+            fill="#2E565B" />
+          <path
+            d="M89.6176 28.1265C83.54 28.1265 78.3431 32.4649 77.2582 38.4425C77.1665 38.9518 76.7743 39.3528 76.2673 39.458C71.6358 40.4165 68.2735 44.5493 68.2735 49.2859C68.2735 54.8208 72.7767 59.324 78.3116 59.324H99.1612C99.2066 59.317 99.2529 59.3133 99.3001 59.3124C103.031 59.1976 105.955 56.1854 105.955 52.4559C105.955 49.8383 104.493 47.4846 102.14 46.3126C101.57 46.0297 101.299 45.3679 101.506 44.7674C101.96 43.4365 102.191 42.0682 102.191 40.7003C102.191 33.767 96.5505 28.1265 89.6176 28.1265ZM99.339 61.8597H78.3116C71.3788 61.8597 65.7383 56.2192 65.7383 49.2859C65.7383 43.6357 69.5585 38.6712 74.935 37.1728C76.5469 30.414 82.594 25.5908 89.6176 25.5908C97.9494 25.5908 104.727 32.3686 104.727 40.7003C104.727 42.0029 104.553 43.3041 104.212 44.5798C106.876 46.3047 108.491 49.234 108.491 52.4559C108.491 57.5019 104.585 61.5883 99.5641 61.8393C99.4909 61.8523 99.4163 61.8597 99.339 61.8597Z"
+            fill="#2E565B" />
+          <path
+            d="M29.9749 80.1513C29.2752 80.1513 28.707 79.5831 28.707 78.8834V38.6665C28.707 37.9664 29.2752 37.3987 29.9749 37.3987C30.675 37.3987 31.2432 37.9664 31.2432 38.6665V78.8834C31.2432 79.5831 30.675 80.1513 29.9749 80.1513Z"
+            fill="#2E565B" />
+          <path
+            d="M57.7195 80.1503C57.0193 80.1503 56.4512 79.5821 56.4512 78.8825V30.4241C56.4512 29.724 57.0193 29.1562 57.7195 29.1562C58.4192 29.1562 58.9873 29.724 58.9873 30.4241V78.8825C58.9873 79.5821 58.4192 80.1503 57.7195 80.1503Z"
+            fill="#2E565B" />
+          <path
+            d="M48.1068 47.5411C45.2831 47.5411 42.9849 49.8383 42.9849 52.6615C42.9849 55.4857 45.2831 57.7825 48.1068 57.7825C50.9296 57.7825 53.2273 55.4857 53.2273 52.6615C53.2273 49.8383 50.9296 47.5411 48.1068 47.5411ZM48.1068 60.3186C43.8842 60.3186 40.4492 56.8841 40.4492 52.6615C40.4492 48.4399 43.8842 45.0054 48.1068 45.0054C52.328 45.0054 55.7629 48.4399 55.7629 52.6615C55.7629 56.8841 52.328 60.3186 48.1068 60.3186Z"
+            fill="#2E565B" />
+          <path
+            d="M57.3637 63.2888C57.0368 63.2888 56.7108 63.1633 56.4631 62.9132L47.2024 53.5581C46.7102 53.0603 46.7143 52.2569 47.2117 51.7642C47.7099 51.272 48.5115 51.2762 49.0046 51.773L58.2653 61.1281C58.7575 61.6259 58.7533 62.4293 58.256 62.922C58.0087 63.1665 57.6869 63.2888 57.3637 63.2888Z"
+            fill="#2E565B" />
+          <path
+            d="M87.1186 80.153C86.4185 80.153 85.8512 79.5848 85.8512 78.8852V53.2249L80.6428 48.4818C80.1251 48.0095 80.0876 47.2084 80.5585 46.6903C81.0308 46.1721 81.8342 46.1364 82.3501 46.606L87.9725 51.7269C88.2369 51.9668 88.3865 52.3081 88.3865 52.6641V78.8852C88.3865 79.5848 87.8188 80.153 87.1186 80.153Z"
+            fill="#2E565B" />
+          <path
+            d="M87.1182 53.9287C86.7265 53.9287 86.3394 53.7471 86.0912 53.4054C85.6804 52.8382 85.8059 52.0459 86.3732 51.6347L93.4297 46.5142C93.9955 46.1039 94.7897 46.2294 95.2009 46.7957C95.6116 47.3625 95.4861 48.1553 94.9193 48.5665L87.8619 53.6869C87.6378 53.8504 87.3771 53.9287 87.1182 53.9287Z"
+            fill="#2E565B" />
+          <path
+            d="M40.0608 79.083C39.7362 79.083 39.4121 78.9594 39.1639 78.7117L35.897 75.4443C35.4015 74.9493 35.4015 74.1469 35.897 73.6514C36.3925 73.1559 37.1945 73.1559 37.6895 73.6514L40.9568 76.9187C41.4527 77.4142 41.4527 78.2167 40.9568 78.7117C40.7095 78.9594 40.3849 79.083 40.0608 79.083Z"
+            fill="#2E565B" />
+          <path
+            d="M39.6482 79.083C39.3241 79.083 38.9995 78.9594 38.7518 78.7117C38.2572 78.2167 38.2572 77.4142 38.7518 76.9187L42.0196 73.6514C42.5146 73.1559 43.3166 73.1559 43.812 73.6514C44.3075 74.1469 44.3075 74.9493 43.812 75.4443L40.5452 78.7117C40.297 78.9594 39.9728 79.083 39.6482 79.083Z"
+            fill="#2E565B" />
+          <path
+            d="M68.1781 79.083C67.8535 79.083 67.5294 78.9594 67.2821 78.7116L62.1255 73.5546C61.63 73.0591 61.63 72.2576 62.1255 71.7616C62.6201 71.2666 63.4225 71.2666 63.918 71.7616L69.0746 76.9187C69.5701 77.4142 69.5701 78.2166 69.0746 78.7116C68.8273 78.9594 68.5032 79.083 68.1781 79.083Z"
+            fill="#2E565B" />
+          <path
+            d="M67.5297 79.0833C67.2051 79.0833 66.8809 78.9596 66.6337 78.7119C66.1377 78.2169 66.1377 77.4144 66.6337 76.9189L71.7903 71.7619C72.2857 71.2669 73.0877 71.2669 73.5827 71.7619C74.0782 72.2578 74.0782 73.0594 73.5827 73.5548L68.4262 78.7119C68.1784 78.9596 67.8538 79.0833 67.5297 79.0833Z"
+            fill="#2E565B" />
+          <path
+            d="M79.2663 79.083C78.9422 79.083 78.6176 78.9594 78.3694 78.7117L75.1021 75.4443C74.6066 74.9493 74.6066 74.1469 75.1021 73.6514C75.5975 73.1559 76.3996 73.1559 76.8946 73.6514L80.1633 76.9187C80.6583 77.4142 80.6583 78.2167 80.1633 78.7117C79.9155 78.9594 79.5909 79.083 79.2663 79.083Z"
+            fill="#2E565B" />
+          <path
+            d="M78.854 79.083C78.5299 79.083 78.2053 78.9594 77.9575 78.7117C77.4621 78.2167 77.4621 77.4142 77.9575 76.9187L81.2253 73.6514C81.7203 73.1559 82.5223 73.1559 83.0178 73.6514C83.5133 74.1469 83.5133 74.9493 83.0178 75.4443L79.751 78.7117C79.5028 78.9594 79.1786 79.083 78.854 79.083Z"
+            fill="#2E565B" />
+          <path
+            d="M109.296 77.9028H11.2286C6.1012 77.9028 0.125 79.8954 0.125 87.5372C0.125 95.1794 7.09538 96.7932 11.7584 96.7932H87.3402C91.1743 96.7932 95.7373 99.277 95.7373 102.988C95.7373 106.699 92.3537 109.831 87.938 109.831H47.1696C46.8788 109.831 46.6427 110.4 46.6427 111.1C46.6427 111.799 46.8788 112.368 47.1696 112.368H87.938C95.1154 112.368 98.3994 107.98 98.3994 103.087C98.3994 98.1935 93.654 94.2575 87.3402 94.2575H11.7584C10.4609 94.2575 2.89917 93.9996 2.89917 87.5038C2.89917 81.0081 9.28749 80.4385 11.2286 80.4385H109.296C109.996 80.4385 110.563 79.8708 110.563 79.1707C110.563 78.4705 109.996 77.9028 109.296 77.9028Z"
+            fill="white" />
+        </svg>
 
-      <p>
-        Lush Landscape &amp;
-        <br />
-        Tree-lined Jogging Trail
-      </p>
+        <p>
+          Lush Landscape &amp;
+          <br />
+          Tree-lined Jogging Trail
+        </p>
+      </div>
+      <div class="icon-group">
+        <svg width="119" height="117" class="icon" viewBox="0 0 119 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M45.1267 11.7546C45.1286 6.27387 49.5732 1.8324 55.0539 1.83432C60.5346 1.83624 64.9761 6.28081 64.9742 11.7615C64.9723 17.2423 60.5277 21.6837 55.0469 21.6818C49.5662 21.6799 45.1248 17.2353 45.1267 11.7546Z"
+            stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
+          <path
+            d="M66.1719 47.7883L66.8109 47.974L71.4753 49.3316C73.86 50.0457 76.3716 48.6463 77.0051 46.2162C77.6089 43.9028 76.191 41.5398 73.9012 40.8554L66.1756 38.6313"
+            stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
+          <path
+            d="M49.6116 23.7261C50.4562 23.0102 51.5935 22.3332 52.6738 22.0119C52.6738 22.0119 52.8336 21.9883 53.0753 21.9396C53.374 21.8711 53.674 21.8109 53.9792 21.7757C54.3593 21.7253 54.7492 21.6813 55.0442 21.6826C58.9478 21.6873 62.1915 24.4522 62.9305 28.1279C63.0324 28.6364 63.0847 29.155 63.087 29.6833V29.7269C63.087 29.7269 63.0787 36.7611 63.0754 43.8209C63.0639 50.882 63.062 57.9501 63.0504 58.0214C63.0481 58.7855 63.4102 59.5102 64.0242 59.9765L75.2635 70.6731C76.2665 71.4339 76.9643 72.5336 77.2139 73.7755L81.7838 94.6432C82.3451 97.4354 80.5502 100.155 77.7613 100.733L77.7446 100.737C74.9473 101.316 72.218 99.5145 71.6549 96.7139L68.0551 80.6288C67.8056 79.3868 67.1073 78.2871 66.0964 77.5277L53.5031 67.0084C53.5031 67.0084 47.9242 63.0562 47.0227 58.572C46.9541 58.2303 46.919 57.8821 46.9102 57.5366V57.4936L46.9199 36.5162"
+            stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
+          <path
+            d="M45.2056 62.4045L45.2042 62.4031L32.0775 93.4825C30.8258 96.033 31.8728 99.1132 34.415 100.375C36.972 101.629 40.2171 100.257 41.472 97.7004L52.7557 70.407"
+            stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
+          <path
+            d="M53.8468 31.4824L46.9806 36.1398L46.2355 36.6459C45.4548 37.1567 44.8612 37.8953 44.5291 38.7616C44.4828 38.882 44.4421 39.0038 44.4074 39.1274L42.0388 47.7755C41.3841 50.0736 39.0396 51.5221 36.7183 50.9483C34.2808 50.3464 32.849 47.8533 33.5316 45.4597L34.8286 40.7782L35.4477 38.5375L36.8429 33.5004C37.1346 32.4784 37.7852 31.5935 38.6761 31.0152L49.357 23.9795"
+            stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
+          <path d="M1.16406 105.573H117.694" stroke="white" stroke-width="2.19968" stroke-miterlimit="10"
+            stroke-linecap="round" />
+          <path
+            d="M7.05328 111.464H7.03337L5.45806 113.912H7.05328V111.464ZM7.05328 115.177H3.95312V113.912L6.85232 109.498H8.49848V113.912H9.41163V115.177H8.49848V116.602H7.05328V115.177Z"
+            fill="#2E565B" />
+          <path
+            d="M11.4859 113.047C11.4859 113.234 11.4942 113.459 11.5109 113.719C11.5275 113.98 11.5725 114.231 11.6465 114.472C11.7197 114.713 11.8318 114.917 11.9823 115.084C12.1328 115.251 12.3448 115.335 12.6194 115.335C12.8871 115.335 13.0978 115.251 13.2515 115.084C13.4057 114.917 13.5196 114.713 13.5932 114.472C13.6664 114.231 13.7118 113.98 13.7284 113.719C13.7451 113.459 13.7534 113.234 13.7534 113.047C13.7534 112.86 13.7451 112.636 13.7284 112.375C13.7118 112.114 13.6664 111.863 13.5932 111.622C13.5196 111.381 13.4057 111.177 13.2515 111.01C13.0978 110.843 12.8871 110.759 12.6194 110.759C12.3448 110.759 12.1328 110.843 11.9823 111.01C11.8318 111.177 11.7197 111.381 11.6465 111.622C11.5725 111.863 11.5275 112.114 11.5109 112.375C11.4942 112.636 11.4859 112.86 11.4859 113.047ZM9.98047 113.047C9.98047 112.626 10.0189 112.198 10.0958 111.763C10.1726 111.328 10.3102 110.933 10.5074 110.579C10.7047 110.224 10.9742 109.935 11.3155 109.711C11.6563 109.487 12.0911 109.374 12.6194 109.374C13.1482 109.374 13.5826 109.487 13.9243 109.711C14.2651 109.935 14.5346 110.224 14.7319 110.579C14.9291 110.933 15.0662 111.328 15.1431 111.763C15.2199 112.198 15.2584 112.626 15.2584 113.047C15.2584 113.469 15.2199 113.897 15.1431 114.331C15.0662 114.767 14.9291 115.161 14.7319 115.515C14.5346 115.87 14.2651 116.159 13.9243 116.384C13.5826 116.607 13.1482 116.72 12.6194 116.72C12.0911 116.72 11.6563 116.607 11.3155 116.384C10.9742 116.159 10.7047 115.87 10.5074 115.515C10.3102 115.161 10.1726 114.767 10.0958 114.331C10.0189 113.897 9.98047 113.469 9.98047 113.047Z"
+            fill="#2E565B" />
+          <path
+            d="M16.6441 112.926H15.6504V111.722H16.6441V110.859C16.6441 110.592 16.6677 110.339 16.714 110.101C16.7613 109.864 16.8511 109.655 16.9849 109.474C17.1187 109.294 17.3114 109.152 17.5619 109.048C17.8129 108.944 18.1426 108.892 18.5505 108.892C18.7042 108.892 18.8547 108.899 19.0025 108.912C19.1492 108.925 19.2933 108.949 19.4336 108.982L19.3632 110.257C19.2766 110.223 19.196 110.198 19.1228 110.182C19.0488 110.165 18.9654 110.157 18.8719 110.157C18.6311 110.157 18.45 110.209 18.3301 110.312C18.2097 110.416 18.149 110.628 18.149 110.949V111.722H19.2632V112.926H18.149V116.599H16.6441V112.926Z"
+            fill="#2E565B" />
+          <path
+            d="M23.1562 112.926H21.8318V114.552C21.8318 114.686 21.8379 114.808 21.8517 114.919C21.8652 115.029 21.8948 115.124 21.942 115.205C21.9888 115.285 22.0606 115.347 22.1578 115.39C22.2546 115.433 22.3833 115.455 22.544 115.455C22.6246 115.455 22.7297 115.447 22.8598 115.43C22.9909 115.414 23.089 115.375 23.1562 115.315V116.569C22.989 116.63 22.8149 116.669 22.6343 116.69C22.4537 116.71 22.2768 116.719 22.1027 116.719C21.8485 116.719 21.6142 116.693 21.4003 116.64C21.1859 116.586 20.9988 116.501 20.8381 116.384C20.6774 116.267 20.5524 116.115 20.4621 115.927C20.3714 115.74 20.3264 115.512 20.3264 115.245V112.926H19.3633V111.723H20.3264V110.277H21.8318V111.723H23.1562V112.926Z"
+            fill="#2E565B" />
+          <path d="M36.5859 113.862H100.025" stroke="white" stroke-width="2.19968" stroke-miterlimit="10"
+            stroke-linecap="round" />
+        </svg>
+        <p>
+          40ft Internal Road
+          <br />
+          With Pedestrian Walkway
+        </p>
+      </div>
+      <div class="icon-group">
+        <svg width="119" height="114" class="icon" viewBox="0 0 119 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M111.894 112.533H7.47464C4.41847 112.533 1.91797 110.032 1.91797 106.976V56.1455C1.91797 53.0894 4.41847 50.5889 7.47464 50.5889H111.894C114.95 50.5889 117.45 53.0894 117.45 56.1455V106.976C117.45 110.032 114.95 112.533 111.894 112.533Z"
+            stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
+          <path
+            d="M59.4784 105.689C57.3224 105.689 55.5586 103.925 55.5586 101.769V60.7782C55.5586 58.6226 57.3224 56.8584 59.4784 56.8584C61.6344 56.8584 63.3981 58.6226 63.3981 60.7782V101.769C63.3981 103.925 61.6344 105.689 59.4784 105.689Z"
+            stroke="white" stroke-width="2.19968" stroke-miterlimit="10" />
+          <path
+            d="M37.201 105.69C35.045 105.69 33.2812 103.926 33.2812 101.77V60.7787C33.2812 58.6231 35.045 56.8589 37.201 56.8589C39.357 56.8589 41.1208 58.6231 41.1208 60.7787V101.77C41.1208 103.926 39.357 105.69 37.201 105.69Z"
+            stroke="white" stroke-width="2.19968" stroke-miterlimit="10" />
+          <path
+            d="M104.867 105.69C102.711 105.69 100.947 103.926 100.947 101.77V60.7787C100.947 58.6231 102.711 56.8589 104.867 56.8589C107.023 56.8589 108.787 58.6231 108.787 60.7787V101.77C108.787 103.926 107.023 105.69 104.867 105.69Z"
+            stroke="white" stroke-width="2.19968" stroke-miterlimit="10" />
+          <path
+            d="M82.9998 105.69C80.8439 105.69 79.0801 103.926 79.0801 101.77V60.7787C79.0801 58.6231 80.8439 56.8589 82.9998 56.8589C85.1558 56.8589 86.9196 58.6231 86.9196 60.7787V101.77C86.9196 103.926 85.1558 105.69 82.9998 105.69Z"
+            stroke="white" stroke-width="2.19968" stroke-miterlimit="10" />
+          <path
+            d="M14.0916 105.689C11.9357 105.689 10.1719 103.926 10.1719 101.77V60.7784C10.1719 58.6229 11.9357 56.8586 14.0916 56.8586C16.2476 56.8586 18.0114 58.6229 18.0114 60.7784V101.77C18.0114 103.926 16.2476 105.689 14.0916 105.689Z"
+            stroke="white" stroke-width="2.19968" stroke-miterlimit="10" />
+          <path
+            d="M59.3379 27.2044C59.3379 34.3651 53.533 40.1699 46.3723 40.1699C39.2116 40.1699 33.4068 34.3651 33.4068 27.2044C33.4068 20.0437 46.3723 2.19933 46.3723 2.19933C46.3723 2.19933 59.3379 20.0437 59.3379 27.2044Z"
+            stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
+          <path
+            d="M85.9609 26.1672C85.9609 30.5773 82.3861 34.1521 77.976 34.1521C73.5663 34.1521 69.9911 30.5773 69.9911 26.1672C69.9911 21.7575 77.976 10.7678 77.976 10.7678C77.976 10.7678 85.9609 21.7575 85.9609 26.1672Z"
+            stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
+        </svg>
+        <p>
+          Concealed Drainage &amp;
+          <br />
+          Underground Cabling
+        </p>
+      </div>
+      <div class="icon-group">
+        <svg width="104" height="105" class="icon" viewBox="0 0 104 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M100.755 39.6246C101.859 43.811 102.418 48.1226 102.418 52.4521C102.418 80.2355 79.8949 102.759 52.1111 102.759C24.3277 102.759 1.80469 80.2355 1.80469 52.4521C1.80469 24.6683 24.3277 2.14526 52.1111 2.14526C59.6307 2.14526 67.0548 3.83078 73.8368 7.0782"
+            stroke="white" stroke-width="2.63961" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path
+            d="M96.0889 9.4102L85.3242 25.0615L77.499 19.6789C73.1949 16.7186 72.0952 10.7748 75.0555 6.47119C78.0158 2.16708 83.9591 1.06732 88.2632 4.02764L96.0889 9.4102Z"
+            stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10" stroke-linecap="round"
+            stroke-linejoin="round" />
+          <path d="M87.428 23.4686L93.4475 27.6092" stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10"
+            stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M95.3557 11.9471L101.375 16.0877" stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10"
+            stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M42.4834 69.2191H27.9629V35.6851H42.4834" stroke="#263B3A" stroke-width="3.07955"
+            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M30.0488 52.4524H42.4305" stroke="#263B3A" stroke-width="3.07955" stroke-miterlimit="10"
+            stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M55.3301 35.6812L68.1901 69.2152L81.0505 35.6812" stroke="#263B3A" stroke-width="3.07955"
+            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <p>
+          Infra Ready for <br />
+          EV Charging
+        </p>
+      </div>
     </div>
-    <div class="icon-group">
-      <svg width="119" height="117" class="icon" viewBox="0 0 119 117" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M45.1267 11.7546C45.1286 6.27387 49.5732 1.8324 55.0539 1.83432C60.5346 1.83624 64.9761 6.28081 64.9742 11.7615C64.9723 17.2423 60.5277 21.6837 55.0469 21.6818C49.5662 21.6799 45.1248 17.2353 45.1267 11.7546Z"
-          stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
-        <path
-          d="M66.1719 47.7883L66.8109 47.974L71.4753 49.3316C73.86 50.0457 76.3716 48.6463 77.0051 46.2162C77.6089 43.9028 76.191 41.5398 73.9012 40.8554L66.1756 38.6313"
-          stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
-        <path
-          d="M49.6116 23.7261C50.4562 23.0102 51.5935 22.3332 52.6738 22.0119C52.6738 22.0119 52.8336 21.9883 53.0753 21.9396C53.374 21.8711 53.674 21.8109 53.9792 21.7757C54.3593 21.7253 54.7492 21.6813 55.0442 21.6826C58.9478 21.6873 62.1915 24.4522 62.9305 28.1279C63.0324 28.6364 63.0847 29.155 63.087 29.6833V29.7269C63.087 29.7269 63.0787 36.7611 63.0754 43.8209C63.0639 50.882 63.062 57.9501 63.0504 58.0214C63.0481 58.7855 63.4102 59.5102 64.0242 59.9765L75.2635 70.6731C76.2665 71.4339 76.9643 72.5336 77.2139 73.7755L81.7838 94.6432C82.3451 97.4354 80.5502 100.155 77.7613 100.733L77.7446 100.737C74.9473 101.316 72.218 99.5145 71.6549 96.7139L68.0551 80.6288C67.8056 79.3868 67.1073 78.2871 66.0964 77.5277L53.5031 67.0084C53.5031 67.0084 47.9242 63.0562 47.0227 58.572C46.9541 58.2303 46.919 57.8821 46.9102 57.5366V57.4936L46.9199 36.5162"
-          stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
-        <path
-          d="M45.2056 62.4045L45.2042 62.4031L32.0775 93.4825C30.8258 96.033 31.8728 99.1132 34.415 100.375C36.972 101.629 40.2171 100.257 41.472 97.7004L52.7557 70.407"
-          stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
-        <path
-          d="M53.8468 31.4824L46.9806 36.1398L46.2355 36.6459C45.4548 37.1567 44.8612 37.8953 44.5291 38.7616C44.4828 38.882 44.4421 39.0038 44.4074 39.1274L42.0388 47.7755C41.3841 50.0736 39.0396 51.5221 36.7183 50.9483C34.2808 50.3464 32.849 47.8533 33.5316 45.4597L34.8286 40.7782L35.4477 38.5375L36.8429 33.5004C37.1346 32.4784 37.7852 31.5935 38.6761 31.0152L49.357 23.9795"
-          stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
-        <path d="M1.16406 105.573H117.694" stroke="white" stroke-width="2.19968" stroke-miterlimit="10"
-          stroke-linecap="round" />
-        <path
-          d="M7.05328 111.464H7.03337L5.45806 113.912H7.05328V111.464ZM7.05328 115.177H3.95312V113.912L6.85232 109.498H8.49848V113.912H9.41163V115.177H8.49848V116.602H7.05328V115.177Z"
-          fill="#2E565B" />
-        <path
-          d="M11.4859 113.047C11.4859 113.234 11.4942 113.459 11.5109 113.719C11.5275 113.98 11.5725 114.231 11.6465 114.472C11.7197 114.713 11.8318 114.917 11.9823 115.084C12.1328 115.251 12.3448 115.335 12.6194 115.335C12.8871 115.335 13.0978 115.251 13.2515 115.084C13.4057 114.917 13.5196 114.713 13.5932 114.472C13.6664 114.231 13.7118 113.98 13.7284 113.719C13.7451 113.459 13.7534 113.234 13.7534 113.047C13.7534 112.86 13.7451 112.636 13.7284 112.375C13.7118 112.114 13.6664 111.863 13.5932 111.622C13.5196 111.381 13.4057 111.177 13.2515 111.01C13.0978 110.843 12.8871 110.759 12.6194 110.759C12.3448 110.759 12.1328 110.843 11.9823 111.01C11.8318 111.177 11.7197 111.381 11.6465 111.622C11.5725 111.863 11.5275 112.114 11.5109 112.375C11.4942 112.636 11.4859 112.86 11.4859 113.047ZM9.98047 113.047C9.98047 112.626 10.0189 112.198 10.0958 111.763C10.1726 111.328 10.3102 110.933 10.5074 110.579C10.7047 110.224 10.9742 109.935 11.3155 109.711C11.6563 109.487 12.0911 109.374 12.6194 109.374C13.1482 109.374 13.5826 109.487 13.9243 109.711C14.2651 109.935 14.5346 110.224 14.7319 110.579C14.9291 110.933 15.0662 111.328 15.1431 111.763C15.2199 112.198 15.2584 112.626 15.2584 113.047C15.2584 113.469 15.2199 113.897 15.1431 114.331C15.0662 114.767 14.9291 115.161 14.7319 115.515C14.5346 115.87 14.2651 116.159 13.9243 116.384C13.5826 116.607 13.1482 116.72 12.6194 116.72C12.0911 116.72 11.6563 116.607 11.3155 116.384C10.9742 116.159 10.7047 115.87 10.5074 115.515C10.3102 115.161 10.1726 114.767 10.0958 114.331C10.0189 113.897 9.98047 113.469 9.98047 113.047Z"
-          fill="#2E565B" />
-        <path
-          d="M16.6441 112.926H15.6504V111.722H16.6441V110.859C16.6441 110.592 16.6677 110.339 16.714 110.101C16.7613 109.864 16.8511 109.655 16.9849 109.474C17.1187 109.294 17.3114 109.152 17.5619 109.048C17.8129 108.944 18.1426 108.892 18.5505 108.892C18.7042 108.892 18.8547 108.899 19.0025 108.912C19.1492 108.925 19.2933 108.949 19.4336 108.982L19.3632 110.257C19.2766 110.223 19.196 110.198 19.1228 110.182C19.0488 110.165 18.9654 110.157 18.8719 110.157C18.6311 110.157 18.45 110.209 18.3301 110.312C18.2097 110.416 18.149 110.628 18.149 110.949V111.722H19.2632V112.926H18.149V116.599H16.6441V112.926Z"
-          fill="#2E565B" />
-        <path
-          d="M23.1562 112.926H21.8318V114.552C21.8318 114.686 21.8379 114.808 21.8517 114.919C21.8652 115.029 21.8948 115.124 21.942 115.205C21.9888 115.285 22.0606 115.347 22.1578 115.39C22.2546 115.433 22.3833 115.455 22.544 115.455C22.6246 115.455 22.7297 115.447 22.8598 115.43C22.9909 115.414 23.089 115.375 23.1562 115.315V116.569C22.989 116.63 22.8149 116.669 22.6343 116.69C22.4537 116.71 22.2768 116.719 22.1027 116.719C21.8485 116.719 21.6142 116.693 21.4003 116.64C21.1859 116.586 20.9988 116.501 20.8381 116.384C20.6774 116.267 20.5524 116.115 20.4621 115.927C20.3714 115.74 20.3264 115.512 20.3264 115.245V112.926H19.3633V111.723H20.3264V110.277H21.8318V111.723H23.1562V112.926Z"
-          fill="#2E565B" />
-        <path d="M36.5859 113.862H100.025" stroke="white" stroke-width="2.19968" stroke-miterlimit="10"
-          stroke-linecap="round" />
-      </svg>
-      <p>
-        40ft Internal Road
-        <br />
-        With Pedestrian Walkway
-      </p>
-    </div>
-    <div class="icon-group">
-      <svg width="119" height="114" class="icon" viewBox="0 0 119 114" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M111.894 112.533H7.47464C4.41847 112.533 1.91797 110.032 1.91797 106.976V56.1455C1.91797 53.0894 4.41847 50.5889 7.47464 50.5889H111.894C114.95 50.5889 117.45 53.0894 117.45 56.1455V106.976C117.45 110.032 114.95 112.533 111.894 112.533Z"
-          stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
-        <path
-          d="M59.4784 105.689C57.3224 105.689 55.5586 103.925 55.5586 101.769V60.7782C55.5586 58.6226 57.3224 56.8584 59.4784 56.8584C61.6344 56.8584 63.3981 58.6226 63.3981 60.7782V101.769C63.3981 103.925 61.6344 105.689 59.4784 105.689Z"
-          stroke="white" stroke-width="2.19968" stroke-miterlimit="10" />
-        <path
-          d="M37.201 105.69C35.045 105.69 33.2812 103.926 33.2812 101.77V60.7787C33.2812 58.6231 35.045 56.8589 37.201 56.8589C39.357 56.8589 41.1208 58.6231 41.1208 60.7787V101.77C41.1208 103.926 39.357 105.69 37.201 105.69Z"
-          stroke="white" stroke-width="2.19968" stroke-miterlimit="10" />
-        <path
-          d="M104.867 105.69C102.711 105.69 100.947 103.926 100.947 101.77V60.7787C100.947 58.6231 102.711 56.8589 104.867 56.8589C107.023 56.8589 108.787 58.6231 108.787 60.7787V101.77C108.787 103.926 107.023 105.69 104.867 105.69Z"
-          stroke="white" stroke-width="2.19968" stroke-miterlimit="10" />
-        <path
-          d="M82.9998 105.69C80.8439 105.69 79.0801 103.926 79.0801 101.77V60.7787C79.0801 58.6231 80.8439 56.8589 82.9998 56.8589C85.1558 56.8589 86.9196 58.6231 86.9196 60.7787V101.77C86.9196 103.926 85.1558 105.69 82.9998 105.69Z"
-          stroke="white" stroke-width="2.19968" stroke-miterlimit="10" />
-        <path
-          d="M14.0916 105.689C11.9357 105.689 10.1719 103.926 10.1719 101.77V60.7784C10.1719 58.6229 11.9357 56.8586 14.0916 56.8586C16.2476 56.8586 18.0114 58.6229 18.0114 60.7784V101.77C18.0114 103.926 16.2476 105.689 14.0916 105.689Z"
-          stroke="white" stroke-width="2.19968" stroke-miterlimit="10" />
-        <path
-          d="M59.3379 27.2044C59.3379 34.3651 53.533 40.1699 46.3723 40.1699C39.2116 40.1699 33.4068 34.3651 33.4068 27.2044C33.4068 20.0437 46.3723 2.19933 46.3723 2.19933C46.3723 2.19933 59.3379 20.0437 59.3379 27.2044Z"
-          stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
-        <path
-          d="M85.9609 26.1672C85.9609 30.5773 82.3861 34.1521 77.976 34.1521C73.5663 34.1521 69.9911 30.5773 69.9911 26.1672C69.9911 21.7575 77.976 10.7678 77.976 10.7678C77.976 10.7678 85.9609 21.7575 85.9609 26.1672Z"
-          stroke="#2E565B" stroke-width="2.19968" stroke-miterlimit="10" />
-      </svg>
-      <p>
-        Concealed Drainage &amp;
-        <br />
-        Underground Cabling
-      </p>
-    </div>
-    <div class="icon-group">
-      <svg width="104" height="105" class="icon" viewBox="0 0 104 105" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M100.755 39.6246C101.859 43.811 102.418 48.1226 102.418 52.4521C102.418 80.2355 79.8949 102.759 52.1111 102.759C24.3277 102.759 1.80469 80.2355 1.80469 52.4521C1.80469 24.6683 24.3277 2.14526 52.1111 2.14526C59.6307 2.14526 67.0548 3.83078 73.8368 7.0782"
-          stroke="white" stroke-width="2.63961" stroke-miterlimit="10" stroke-linecap="round"
-          stroke-linejoin="round" />
-        <path
-          d="M96.0889 9.4102L85.3242 25.0615L77.499 19.6789C73.1949 16.7186 72.0952 10.7748 75.0555 6.47119C78.0158 2.16708 83.9591 1.06732 88.2632 4.02764L96.0889 9.4102Z"
-          stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10" stroke-linecap="round"
-          stroke-linejoin="round" />
-        <path d="M87.428 23.4686L93.4475 27.6092" stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10"
-          stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M95.3557 11.9471L101.375 16.0877" stroke="#2E565B" stroke-width="2.63961" stroke-miterlimit="10"
-          stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M42.4834 69.2191H27.9629V35.6851H42.4834" stroke="#263B3A" stroke-width="3.07955"
-          stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M30.0488 52.4524H42.4305" stroke="#263B3A" stroke-width="3.07955" stroke-miterlimit="10"
-          stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M55.3301 35.6812L68.1901 69.2152L81.0505 35.6812" stroke="#263B3A" stroke-width="3.07955"
-          stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-      <p>
-        Infra Ready for <br />
-        EV Charging
-      </p>
-    </div>
-  </div>
-</section>
+  </section>
 
 <!-- SECTION 4 -->
 <section id="video" class="sections bg-[#E1EDEA] text-[#2E565B] !gap-0 py-10">
@@ -386,7 +431,36 @@
 </section>
 
 
-<!-- SECTION 5 -->
+  <!-- SECTION 5 -->
+  <section class="sections bg-[#2E565B] text-white !gap-0 py-10">
+    <h2 class="section-heading md:w-2/3 xl:w-2/5 md:!leading-[65px]">
+      Master-planned to Perfection
+    </h2>
+    <p class="section-subheading">
+      Oozing with natural charm featuring an abundance of tree-lined streets and green spaces, it's a joy to soak in the
+      beauty and tranquility of
+      Sunway Wellesley Serene Villas. Additional sports and activity amenities means, the outdoors are now as enjoyable
+      as the indoors.
+    </p>
+
+
+    <div class="grid grid-cols-3 gap-4 my-10">
+      <div class="col-span-2"> <img src="./assets/siteplan/map.png" alt="" class="" />
+      </div>
+
+      <div class="max-w-xs py-10 mx-10 overflow-hidden block  items-center justify-center h-full bg-[#D6EDE7]" style="padding-left: 30px; border-radius: 15px;">
+        <p class="text-left text-[#2E565B] text-2xl font-bold pb-3">Site Plan</p>
+        <img src="./assets/siteplan/circle pink list.png" alt="" class="" />
+        <hr class="w-52 h-0.5 my-4  border-0 rounded" style="background-color: #2E565B; border: none;">
+        <img src="./assets/siteplan/square house list.png" alt="" class="" />
+    </div>
+    
+
+  </div>
+
+  </section>
+
+  <!-- SECTION 6 -->
   <section id="location-map" class="sections bg-[#2A565C]/10 text-[#2A565A] !gap-0">
     <h2 class="xl:w-1/2 w-[90%] section-heading">
       Exactly Where You Want To Be
@@ -400,53 +474,144 @@
             Proposed Raja Uda - Bukit Mertajam LRT Line
           </p>
         </div>
-        <div class="flex flex-row gap-4 items-center justify-start">
-          <img src="./assets/big-map/road-icon.png" alt="" class="legend" />
-          <p class="font-bold col-span-3">Major Roads</p>
-        </div>
-      </div>
-      <div class="flex flex-row gap-4 lg:items-start items-center md:text-sm">
-        <img src="./assets/big-map/landmark-icon.png" alt="" class="pin-icon" />
-        <ol class="list-decimal list-inside list font-figtree font-bold text-black col-span-4">
-          <li>Bukit Mertajam Town Centre (0.5km)</li>
-          <li>Butterworth-Kulim Expressway (6.0km)</li>
-          <li>North-South Highway (6.5km)</li>
-          <li>Penang Bridge (8.5km)</li>
-          <li>
-            Bandar Sunway Seberang Jaya (9.5km)
-            <ul class="list-inside font-normal">
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" height="16px"
-                  class="inline-block mr-1 ml-4 fill-[#2A565A]">
-                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                  <path
-                    d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z" />
-                </svg>
-                Sunway Carnival Mall
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" height="16px"
-                  class="inline-block mr-1 ml-4 fill-[#2A565A]">
-                  <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                  <path
-                    d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z" />
-                </svg>
-                Sunway Medical Centre
-              </li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-      <div class="flex flex-row gap-4 lg:items-start items-center md:text-sm">
-        <img src="./assets/big-map/train-icon.png" alt="" class="pin-icon" />
-        <p class="font-figtree font-bold col-span-4 text-black">
-          ETS Train Station (1.0km)
-        </p>
-      </div>
-    </div>
-  </section>
 
-<!-- SECTION 6 -->
+
+        <div class="content">
+
+          <h2 class="text-3xl font-bold">
+            Diverse Facade Design
+          </h2>
+
+          <p class="pt-2 text-lg w-4/5">
+            A diverse collection of contemporary architectural facades is a treat amidst a tropical setting that spells
+            the best qualities of breezy living.
+          </p>
+        </div>
+
+        <div class="content">
+          <h2 class="text-3xl font-bold">
+            Linear Garden
+          </h2>
+
+          <p class="pt-2 text-lg w-4/5">
+            Every nook, a splash of green for that soothing and relaxing touch, transforming moments into a seamless
+            connection of living space and nature.
+          </p>
+        </div>
+
+        <div class="content">
+          <h2 class="text-3xl font-bold">
+            Green Boulevard
+          </h2>
+
+          <p class="pt-2 text-lg w-4/5">
+            A meandering trail of walkways amidst plush tree-lined pathway adds to the charm of coming home.
+          </p>
+        </div>
+
+        <div class="content">
+          <h2 class="text-3xl font-bold">
+            Residents’ Clubhouse
+          </h2>
+
+          <p class="pt-2 text-lg w-4/5">
+            For splashing great times, the clubhouse is ever ready to accommodate you and your loved ones.
+          </p>
+        </div>
+
+        <div class="content">
+          <h2 class="text-3xl font-bold">
+            Children’s Playground
+          </h2>
+
+          <p class="pt-2 text-lg w-4/5">
+            Live, play and laugh to your heart's content. Every facility you desire is just a short walk away.
+          </p>
+        </div>
+
+        <div class="content">
+          <h2 class="text-3xl font-bold">
+            Intermediate Unit (Lower)
+          </h2>
+          <h3 class="text-2xl font-light">
+            Living & Dining
+          </h3>
+
+          <p class="pt-3 font-light text-lg w-4/5">
+            Designed with fluidity of movement, our plush living spaces also feature rooms with ample natural light.
+          </p>
+        </div>
+
+        <div class="content">
+          <h2 class="text-3xl font-bold">
+            Intermediate Unit (Lower)
+          </h2>
+          <h3 class="text-2xl font-light">
+            Master Bedroom
+          </h3>
+
+          <p class="pt-3 font-light text-lg w-4/5">
+            Invitingly spacious, Sunway Wellesley boasts rooms that are class, comfort and charm personified.
+          </p>
+        </div>
+
+        <div class="content">
+          <h2 class="text-3xl font-bold">
+            Intermediate Unit (Upper)
+          </h2>
+          <h3 class="text-2xl font-light">
+            Living & Dining
+          </h3>
+
+          <p class="pt-3 font-light text-lg w-4/5">
+            Crafted to bring the family together, our common areas are anything but common. They're simply a sheer
+            delight!
+          </p>
+        </div>
+
+        <div class="content">
+          <h2 class="text-3xl font-bold">
+            Intermediate Unit (Upper)
+          </h2>
+          <h3 class="text-2xl font-light">
+            Bedroom & Balcony
+          </h3>
+
+          <p class="pt-2 font-light text-lg w-4/5">
+            For commanding views and the joys of creating memories with your loved ones, just slide into these plush
+            balconies.
+          </p>
+        </div>
+
+        <div class="content">
+          <h2 class="text-3xl font-bold">
+            Corner Unit (Lower)
+          </h2>
+          <h3 class="text-2xl font-light">
+            Living & Dining
+          </h3>
+
+          <p class="pt-2 font-light text-lg w-4/5">
+            Indulge in the good times easily where the luxury of conducive space is always a joy to be experienced.
+          </p>
+        </div>
+
+        <div class="content">
+          <h2 class="text-3xl font-bold">
+            Corner Unit (Upper)
+          </h2>
+          <h3 class="text-2xl font-light">
+            Living & Dining
+          </h3>
+
+          <p class="pt-3 text-lg w-4/5">
+            Space for the family to congregate and enjoy. Here's to the good life.
+          </p>
+        </div>
+
+      </section>
+
+  <!-- SECTION 7 -->
   <section class="sections relative !min-h-0">
     <img src="./assets/zoomed-map/leaf-corner.png" alt="" aria-hidden="true"
       class="absolute top-0 left-0 md:w-1/3 aspect-auto" />
@@ -467,7 +632,7 @@
     </div>
   </section>
 
-<!-- SECTION 7 -->
+  <!-- SECTION 8 -->
   <section id="enquiry"
     class="bg-[#EEC173] bg-[url(assets/enquiries/leaf-bg.png)] bg-contain bg-no-repeat bg-bottom sections">
     <h2 class="section-heading text-[#2A565A]">Enquiry</h2>
@@ -555,7 +720,7 @@
     </form>
   </section>
 
-<!-- SECTION 8 -->
+  <!-- SECTION 9 -->
   <section class="sections !pb-0 !min-h-0">
     <h2
       class="section-heading !font-medium uppercase !font-montserrat text-[#6D6F72] xl:!text-[40px] text-xl md:text-4xl">
@@ -631,13 +796,13 @@
       </p>
     </div>
   </footer>
+
   <!-- Toast -->
   <div id="success-notification"
     class="bg-white rounded-md px-6 py-4 fixed -bottom-full right-4 max-w-sm w-full shadow-lg transition-all duration-300 ease-in-out z-50 font-figtree flex flex-col gap-4 justify-start items-start opacity-0">
     <div class="flex flex-row justify-between items-center w-full">
       <div class="flex flex-row gap-2 justify-start items-center">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 fill-green-800">
-          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
           <path
             d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
         </svg>
@@ -645,7 +810,6 @@
       </div>
       <button id="close-success" aria-label="close success notification" class="rounded-full w-4">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="aspect-square fill-neutral-700">
-          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
           <path
             d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z" />
         </svg>
@@ -658,7 +822,6 @@
     <div class="flex flex-row justify-between items-center w-full">
       <div class="flex flex-row gap-2 justify-start items-center">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-6 fill-red-800">
-          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
           <path
             d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
         </svg>
@@ -666,7 +829,6 @@
       </div>
       <button id="close-error" aria-label="close error notification" class="rounded-full w-4">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="aspect-square fill-neutral-700">
-          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
           <path
             d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z" />
         </svg>
@@ -679,7 +841,6 @@
     <div class="flex flex-row justify-between items-center w-full">
       <div class="flex flex-row gap-2 justify-start items-center">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-4 animate-spin motion-safe:animate-spin">
-          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
 
           <path
             d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z" />
@@ -692,7 +853,60 @@
   <div class="opacity-0 border-red-500 absolute bottom-4 hidden h-72"></div>
 </body>
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<!-- Slick JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+<script>
+  $(document).ready(function () {
+    $('.center').slick({
+      centerMode: true,
+      centerPadding: '160px',
+      variableWidth: true,
+      pauseOnFocus: true,
+      slidesToShow: 3,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
 
+    $('.center .slick-slide').css({
+      'margin-left': '-20px',
+      'margin-top': '10px',
+      'margin-bottom': '10px',
+      'margin-right': '-20px'
+    });
+
+    $('.center .slick-list').css({
+      'margin-left': '2px',
+      'margin-top': '10px',
+      'margin-bottom': '10px',
+      'margin-right': '2px'
+    });
+  });
+
+  $('.center.slider').on('afterChange', function (event, slick, currentSlide) {
+    $('.content-slider .content').removeClass('active');
+    $('.content-slider .content').eq(currentSlide).addClass('active');
+  });
+
+</script>
 
 </html>
