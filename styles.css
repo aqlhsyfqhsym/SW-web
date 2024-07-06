@@ -1986,7 +1986,7 @@ body {
   }
 
   .carousel-height {
-    height: 25vh;
+    height: 25vh !important;
   }
 
   .text-perks {
