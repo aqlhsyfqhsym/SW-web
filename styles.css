@@ -1881,13 +1881,13 @@ body {
 @media screen and (max-width:1061px) {
   .bg-responsive {
     height: auto !important;
-    width: auto  !important;
+    width: auto !important;
   }
 }
 
-.site-plan{
- display: flex;
- align-items: stretch;
+.site-plan {
+  display: flex;
+  align-items: stretch;
 }
 
 .bg-yellow-400 {
@@ -1897,15 +1897,19 @@ body {
 .content-slider .content {
   display: none;
 }
+
 .content-slider .content.active {
   display: block;
 }
 
 .background-section {
   background-image: url('./assets/perks/bg-yellow.png');
-  background-size: cover; /* Ensures the background image covers the entire section */
-  background-position: center; /* Centers the background image */
-  min-height:50vh; /* Sets the minimum height of the section to 100% of the viewport height */
+  background-size: cover;
+  /* Ensures the background image covers the entire section */
+  background-position: center;
+  /* Centers the background image */
+  min-height: 50vh;
+  /* Sets the minimum height of the section to 100% of the viewport height */
   position: relative;
   height: 120vh;
 }
@@ -1917,7 +1921,7 @@ body {
 
 
 .text-perks {
-      width: 35rem;
+  width: 35rem;
 }
 
 .bg-gradient {
@@ -1941,7 +1945,7 @@ body {
 .slick-list {
   margin-left: 2px;
   margin-right: 2px;
-  margin-top: 10px; 
+  margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 40px;
 }
@@ -1949,9 +1953,39 @@ body {
 .slick-slide {
   transition: transform 0.05s ease;
 }
+
 .slick-center img {
-  transform: scale(0.9); /* Scale up the center slide */
+  transform: scale(0.9);
+  /* Scale up the center slide */
 }
+
 .slick-slide:not(.slick-center) img {
-  transform: scale(0.8); /* Scale down the non-center slides */
+  transform: scale(0.8);
+  /* Scale down the non-center slides */
+}
+
+
+.slider-mobile {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .site-plan {
+
+    flex-direction: column;
+  }
+
+  .content-slider-mobile{
+    grid-column: span 2 / span 2;
+  }
+
+  #controls-carousel {
+    height: 25vh;
+  }
 }
