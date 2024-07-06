@@ -1988,4 +1988,10 @@ body {
   #controls-carousel {
     height: 25vh;
   }
+
+  .text-perks {
+    width: 35rem;
+  }
+
+  
 }
