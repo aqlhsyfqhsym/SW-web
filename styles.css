@@ -899,9 +899,13 @@ select {
 
 .button-custom {
   color: #F57921 !important;
-  /* background-color: #F57921 !important; */
+  border: 2px solid #F57921;
+padding-left:9px ;
+padding-right:11px ;
+   /* background-color: #F57921 !important; */
 }
 
+ 
 .section-gated {
   padding: 40px 50px 30px 85px;
 }
@@ -1694,7 +1698,7 @@ body {
   }
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
   .sm\:w-4\/5 {
     width: 80%;
   }
@@ -1847,7 +1851,7 @@ body {
   }
 
   .xl\:w-1\/2 {
-    width: 80%;
+    width: 65%;
   }
 
   .xl\:w-2\/5 {
@@ -1968,6 +1972,7 @@ body {
 .slider-mobile {
   display: flex;
   flex-direction: row;
+  gap:40px;
 }
 
 @media (max-width: 768px) {
@@ -1983,15 +1988,45 @@ body {
 
   .content-slider-mobile{
     grid-column: span 2 / span 2;
+    height: 20vh;
   }
 
   .carousel-height {
-    height: 25vh;
+    height: 25vh !important;
   }
 
   .text-perks {
     width: 20rem;
   }
 
+  .mobile-padding{
+padding: 40px;
+  }
+
+.section-gated {
+  padding: 50px 34px 30px 34px;
+}
+.slicker-mobile{
+  border-radius: 8px;
+}
+
+.slick-center img {
+  transform: scale(0.5);
+  /* Scale up the center slide */
+}
+
+.slick-slide:not(.slick-center) img {
+  transform: scale(0.5);
+  /* Scale down the non-center slides */
+}
+
+.bg-custom-gradient {
+  height: 26vh;
+  }
+
+.floorplan-mobile{
+height: 60vh;
+}
 
 }
+

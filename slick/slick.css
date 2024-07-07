@@ -117,3 +117,10 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+@media (max-width: 768px) {
+    .slick-track {
+    top: -95px;
+
+    }
+}
