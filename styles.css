@@ -1990,11 +1990,9 @@ body {
     grid-column: span 2 / span 2;
     height: 20vh;
   }
+
   .carousel-height {
     height: 25vh !important;
-  .carousel-height {
-    height: 25vh !important;
-    height: 25vh;
   }
 
   .text-perks {
@@ -2030,4 +2028,5 @@ padding: 40px;
 height: 60vh;
 }
 
-}}
+}
+
