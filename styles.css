@@ -900,9 +900,7 @@ select {
 .button-custom {
   color: #F57921 !important;
   border: 2px solid #F57921;
-padding-left:9px ;
-padding-right:11px ;
-   /* background-color: #F57921 !important; */
+ 
 }
 
  
@@ -2025,8 +2023,35 @@ padding: 40px;
   }
 
 .floorplan-mobile{
-height: 60vh;
+height: 70vh;
 }
 
+.h-custom {
+  height: 18rem;
+ }
+
+ .floorplan{
+font-size: 23px !important;
+ 
+  }
+
+  .aspect-auto {
+    z-index: -1 !important;
+  }
+ 
+.h-w-custom-plan {
+  height: 50vh;
+ }
 }
 
+.floorplan{
+ font-size: 45px;
+font-weight: 800;
+line-height: 61.2px;
+text-align: center;
+color: #2E565B;
+ }
+
+ .h-custom {
+  height: 35rem;
+ }
