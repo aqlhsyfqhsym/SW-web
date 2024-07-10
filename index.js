@@ -1702,11 +1702,11 @@ $(document).ready(function () {
   });
 
   $("#menu-btn").on("click", function () {
-    $("#mobile-menu").toggleClass("h-72 h-0");
+    $("#mobile-menu").toggleClass("h-80 h-0");
   });
 
   $(".mobile-link").on("click", function () {
-    $("#mobile-menu").toggleClass("h-72 h-0");
+    $("#mobile-menu").toggleClass("h-80 h-0");
   });
 });
 

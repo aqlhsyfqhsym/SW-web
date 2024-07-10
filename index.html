@@ -8,7 +8,9 @@
   <title>Sunway Wellesly - Bukit Mertajam</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /> -->
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -23,6 +25,23 @@
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/libphonenumber-js@^1.7.6/bundle/libphonenumber-min.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BD6T08NW7B"></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+
+      gtag("config", "G-BD6T08NW7B");
+    </script>
 
   <script src="./index.js" defer></script>
 
@@ -73,7 +92,7 @@
       </nav>
     </div>
     <nav class="w-full md:block hidden ">
-      <ul class="flex flex-row justify-center items-center ">
+      <ul class="flex md:gap-3 flex-row justify-center  items-center ">
         <li class="nav-link"><a href="#home">HOME</a></li>
         <li class="nav-link"><a href="#master-plan">MASTER PLAN</a></li>
         <li class="nav-link"><a href="#features">FEATURES</a></li>
@@ -93,24 +112,24 @@
 
 
   <!-- SECTION 1 -->
-  <div id="controls-carousel" id="home"
-    class="object-cover w-full h-full object-top aspect-[1920/1080] -mb-[1px] carousel-height " data-carousel="static">
-    <div class="relative h-custom-landing overflow-hidden">
+  <section class="sections pt-0 pb-0 ">
+  <div id="controls-carousel" id="home" class="object-cover w-full h-full object-top aspect-[1920/1080] -mb-[1px] carousel-height" data-carousel="static" >
+    <div class="relative h-full overflow-hidden">
       <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item>
         <img src="./assets/landing/landing-img3.png"
-          class="object-cover w-full h-full object-top aspect-[1920/1080] -mb-[1px] bg-responsive" alt="...">
+          class="object-cover lg:w-full lg:h-full object-top aspect-[1920/1080] -mb-[1px] bg-responsive" alt="...">
       </div>
       <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item="active">
         <img src="./assets/landing/landing-img1.png"
-          class="object-cover w-full h-full object-top aspect-[1920/1080] -mb-[1px] bg-responsive " alt="...">
+          class="object-cover lg:w-full lg:h-full object-top aspect-[1920/1080] -mb-[1px] bg-responsive " alt="...">
       </div>
       <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item>
         <img src="./assets/landing/landing-img2.png"
-          class="object-cover w-full h-full object-top aspect-[1920/1080] -mb-[1px] bg-responsive " alt="...">
+          class="object-cover lg:w-full lg:h-full object-top aspect-[1920/1080] -mb-[1px] bg-responsive " alt="...">
       </div>
     </div>
     <button type="button"
-      class=" absolute top-0 start-0 z-30 flex h-full items-center justify-center px-4 cursor-pointer group focus:outline-none"
+      class=" absolute lg:top-0 -top-28 start-0 z-30 flex h-full items-center justify-center px-4 cursor-pointer group focus:outline-none"
       data-carousel-prev>
       <span
         class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -123,7 +142,7 @@
       </span>
     </button>
     <button type="button"
-      class="absolute top-0 end-0 z-30 flex h-full items-center justify-center px-4 cursor-pointer group focus:outline-none"
+      class="absolute lg:top-0 -top-28 end-0 z-30 flex h-full items-center justify-center px-4 cursor-pointer group focus:outline-none"
       data-carousel-next>
       <span
         class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -136,6 +155,7 @@
       </span>
     </button>
   </div>
+</section>
 
   <!-- SECTION 2 -->
   <section class="sections" id="master-plan">
@@ -170,7 +190,7 @@
       <br />
       With Many Excitements
     </h2>
-    <p class="section-subheading">
+    <p class="w-2/3 text-center">
       Step into an extraordinary living experience at Sunway Wellesley - a
       thoughtfully designed community boasting cutting-edge features for the
       modern urbanite. Choose to come home to Sunway Wellesley, where
@@ -820,7 +840,8 @@
 
   <!-- SECTION 4 -->
   <section id="video" class="sections bg-[#E1EDEA] text-[#2E565B] !gap-0 py-10">
-    <h2 class="xl:w-1/2 w-[90%] section-heading">
+       <h2 class="section-heading md:w-2/3 xl:w-2/5 md:!leading-[65px]">
+
       Explore An Amazing Living Experience
     </h2>
 
@@ -836,7 +857,9 @@
     <h2 class="section-heading md:w-2/3  md:!leading-[65px]">
       Master-planned to Perfection
     </h2>
-    <p class="section-subheading">
+    <!-- <p class="section-subheading"> -->
+    <p class="w-2/3 text-center font-medium xl:px-10 section-subheading">
+
       Oozing with natural charm featuring an abundance of tree-lined streets and green spaces, it's a joy to soak in the
       beauty and tranquility of
       Sunway Wellesley Serene Villas. Additional sports and activity amenities means, the outdoors are now as enjoyable
@@ -928,7 +951,7 @@
   </section>
 
   <!-- SECTION 7 -->
-  <section class="sections bg-[#2E565B] text-white !gap-0  sm:gap-2 section-gated">
+  <section class="sections bg-[#2E565B] text-white !gap-0  sm:gap-2 section-gated" id="gallery">
     <div class="grid grid-cols-3 gap-2 slider-mobile">
 
       <section class="content-slider content-slider-mobile">
@@ -1116,7 +1139,7 @@
   </section>
 
   <!-- SECTION 8 -->
-  <section class="sections relative !min-h-0" id="#location-map">
+  <section class="sections relative !min-h-0" id="location-map">
     <h2 class="xl:w-1/2 w-[90%] section-heading text-[#2A565A]">
       Exactly Where You Want To Be
     </h2>
@@ -1341,7 +1364,7 @@
   </section>
 
   <!-- SECTION 10 -->
-  <section id="enquiry"
+  <section id="registration"
     class="bg-[#EEC173] bg-[url(assets/enquiries/leaf-bg.png)] bg-contain bg-no-repeat bg-bottom sections">
     <h2 class="section-heading text-[#2A565A]">Enquiry</h2>
     <form id="enquiry-form"
