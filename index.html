@@ -26,22 +26,20 @@
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/libphonenumber-js@^1.7.6/bundle/libphonenumber-min.js"></script>
 
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-BD6T08NW7B"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BD6T08NW7B"></script>
 
-    <script>
-      window.dataLayer = window.dataLayer || [];
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-      gtag("js", new Date());
+    gtag("js", new Date());
 
-      gtag("config", "G-BD6T08NW7B");
-    </script>
+    gtag("config", "G-BD6T08NW7B");
+  </script>
 
   <script src="./index.js" defer></script>
 
@@ -113,49 +111,50 @@
 
   <!-- SECTION 1 -->
   <section class="sections pt-0 pb-0 ">
-  <div id="controls-carousel" id="home" class="object-cover w-full h-full object-top aspect-[1920/1080] -mb-[1px] carousel-height" data-carousel="static" >
-    <div class="relative h-full overflow-hidden">
-      <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item>
-        <img src="./assets/landing/landing-img3.png"
-          class="object-cover lg:w-full lg:h-full object-top aspect-[1920/1080] -mb-[1px] bg-responsive" alt="...">
+    <div id="controls-carousel" id="home"
+      class="object-cover w-full h-full object-top aspect-[1920/1080] -mb-[1px] carousel-height" data-carousel="static">
+      <div class="relative h-full overflow-hidden">
+        <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item>
+          <img src="./assets/landing/landing-img3.png"
+            class="object-cover lg:w-full lg:h-full object-top aspect-[1920/1080] -mb-[1px] bg-responsive" alt="...">
+        </div>
+        <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item="active">
+          <img src="./assets/landing/landing-img1.png"
+            class="object-cover lg:w-full lg:h-full object-top aspect-[1920/1080] -mb-[1px] bg-responsive " alt="...">
+        </div>
+        <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item>
+          <img src="./assets/landing/landing-img2.png"
+            class="object-cover lg:w-full lg:h-full object-top aspect-[1920/1080] -mb-[1px] bg-responsive " alt="...">
+        </div>
       </div>
-      <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item="active">
-        <img src="./assets/landing/landing-img1.png"
-          class="object-cover lg:w-full lg:h-full object-top aspect-[1920/1080] -mb-[1px] bg-responsive " alt="...">
-      </div>
-      <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item>
-        <img src="./assets/landing/landing-img2.png"
-          class="object-cover lg:w-full lg:h-full object-top aspect-[1920/1080] -mb-[1px] bg-responsive " alt="...">
-      </div>
+      <button type="button"
+        class=" absolute lg:top-0 -top-28 start-0 z-30 flex h-full items-center justify-center px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev>
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M5 1 1 5l4 4" />
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+      <button type="button"
+        class="absolute lg:top-0 -top-28 end-0 z-30 flex h-full items-center justify-center px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next>
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="m1 9 4-4-4-4" />
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
     </div>
-    <button type="button"
-      class=" absolute lg:top-0 -top-28 start-0 z-30 flex h-full items-center justify-center px-4 cursor-pointer group focus:outline-none"
-      data-carousel-prev>
-      <span
-        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M5 1 1 5l4 4" />
-        </svg>
-        <span class="sr-only">Previous</span>
-      </span>
-    </button>
-    <button type="button"
-      class="absolute lg:top-0 -top-28 end-0 z-30 flex h-full items-center justify-center px-4 cursor-pointer group focus:outline-none"
-      data-carousel-next>
-      <span
-        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="m1 9 4-4-4-4" />
-        </svg>
-        <span class="sr-only">Next</span>
-      </span>
-    </button>
-  </div>
-</section>
+  </section>
 
   <!-- SECTION 2 -->
   <section class="sections" id="master-plan">
@@ -840,7 +839,7 @@
 
   <!-- SECTION 4 -->
   <section id="video" class="sections bg-[#E1EDEA] text-[#2E565B] !gap-0 py-10">
-       <h2 class="section-heading md:w-2/3 xl:w-2/5 md:!leading-[65px]">
+    <h2 class="section-heading md:w-2/3 xl:w-2/5 md:!leading-[65px]">
 
       Explore An Amazing Living Experience
     </h2>
@@ -891,7 +890,8 @@
     <img src="./assets/intermediateunit/bottom-low.png" alt="" aria-hidden="true"
       class="absolute md:z-50 bottom-0 z-0 left-0 transform aspect-auto" />
 
-    <div class="flex justify-center items-center md:h-full w-full floorplan-mobile " style="margin-left: auto; margin-right: auto;">
+    <div class="flex justify-center items-center md:h-full w-full floorplan-mobile "
+      style="margin-left: auto; margin-right: auto;">
       <div id="controls-carousel" class=" xl:w-1/2 w-[100%] relative w-4/5" data-carousel="static">
         <div class="relative h-w-custom-plan overflow-hidden rounded-lg">
           <div class="hidden duration-700 ease-in-out carousel-item" data-carousel-item="active">
@@ -952,7 +952,7 @@
 
   <!-- SECTION 7 -->
   <section class="sections bg-[#2E565B] text-white !gap-0  sm:gap-2 section-gated" id="gallery">
-    <div class="grid grid-cols-3 gap-2 slider-mobile">
+    <div class="grid grid-cols-3 gap-2 sm:gap-3 slider-mobile">
 
       <section class="content-slider content-slider-mobile">
 
@@ -1103,11 +1103,14 @@
       <div class="col-span-2 pt-0">
         <section class="text-white bg-custom-gradient bg-opacity-75 slicker-mobile rounded-xl">
           <div class="center slider">
-            <div> <img src="./assets/slick/1.png" class="block img-mobile rounded-lg" alt="..." style="border-radius: 30px">
+            <div> <img src="./assets/slick/1.png" class="block img-mobile rounded-lg" alt="..."
+                style="border-radius: 30px">
             </div>
-            <div> <img src="./assets/slick/2.png" class="block img-mobile rounded-lg block" alt="..." style="border-radius: 30px">
+            <div> <img src="./assets/slick/2.png" class="block img-mobile rounded-lg block" alt="..."
+                style="border-radius: 30px">
             </div>
-            <div> <img src="./assets/slick/3.png" class="block img-mobile rounded-lg block" alt="..." style="border-radius: 30px">
+            <div> <img src="./assets/slick/3.png" class="block img-mobile rounded-lg block" alt="..."
+                style="border-radius: 30px">
             </div>
             <div><img alt="" src="./assets/slick/4.png" class="block  img-mobile rounded-lg block" alt="..."
                 style="border-radius: 30px">
@@ -1118,17 +1121,23 @@
             <div><img alt="" src="./assets/slick/6.png" class="block img-mobile rounded-lg block" alt="..."
                 style="border-radius: 30px">
             </div>
-            <div><img alt="" src="./assets/slick/7.png " class="rounded-lg img-mobile block" alt="..." style="border-radius: 30px">
+            <div><img alt="" src="./assets/slick/7.png " class="rounded-lg img-mobile block" alt="..."
+                style="border-radius: 30px">
             </div>
-            <div><img alt="" src="./assets/slick/8.png" class="rounded-lg img-mobile block" alt="..." style="border-radius: 30px">
+            <div><img alt="" src="./assets/slick/8.png" class="rounded-lg img-mobile block" alt="..."
+                style="border-radius: 30px">
             </div>
-            <div><img alt="" src="./assets/slick/9.png" class="rounded-lg img-mobile block" alt="..." style="border-radius: 30px">
+            <div><img alt="" src="./assets/slick/9.png" class="rounded-lg img-mobile block" alt="..."
+                style="border-radius: 30px">
             </div>
-            <div><img alt="" src="./assets/slick/10.png" class="rounded-lg img-mobile block" alt="..." style="border-radius: 30px">
+            <div><img alt="" src="./assets/slick/10.png" class="rounded-lg img-mobile block" alt="..."
+                style="border-radius: 30px">
             </div>
-            <div><img alt="" src="./assets/slick/12.png" class="rounded-lg img-mobile block" alt="..." style="border-radius: 30px">
+            <div><img alt="" src="./assets/slick/12.png" class="rounded-lg img-mobile block" alt="..."
+                style="border-radius: 30px">
             </div>
-            <div><img alt="" src="./assets/slick/13.png" class="rounded-lg img-mobile block" alt="..." style="border-radius: 30px">
+            <div><img alt="" src="./assets/slick/13.png" class="rounded-lg img-mobile block" alt="..."
+                style="border-radius: 30px">
             </div>
           </div>
         </section>
@@ -1610,6 +1619,7 @@
             arrows: false,
             centerMode: true,
             centerPadding: '20px',
+            variableWidth: true,
             slidesToShow: 1
           }
         }
