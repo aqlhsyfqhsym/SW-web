@@ -890,11 +890,10 @@ select {
   height: 100%;
 }
 
-
-
 .h-w-custom-plan {
-  height: 100vh;
+  height: 79vh;
   width: 100%;
+  max-height: 90vh;
 }
 
 .button-custom {
@@ -1471,7 +1470,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  row-gap: 2.5rem;
+  row-gap: 1.5rem;
   padding-top: 76px;
   padding-bottom: 83px;
 }
@@ -1485,10 +1484,10 @@ body {
 .section-heading {
   text-align: center;
   font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 700;
+   font-weight: 800;
+  line-height: 50px;
+   color: #2E565B;
 }
-
 
 .section-subheading {
   padding-left: 2rem;
@@ -1693,7 +1692,8 @@ body {
 }
 
 .slick-slide {
-  transition: transform 0.05s ease;
+  transition: transform 0.3s ease-in-out;
+  /* transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); */
 }
 
 .slick-center img {
@@ -1789,7 +1789,7 @@ body {
   }
 
   .sections {
-    row-gap: 4rem;
+    row-gap: 2rem;
   }
 
   .xl\:flex {
@@ -1847,7 +1847,7 @@ body {
   }
 
   .section-heading {
-    font-size: 40px;
+    font-size: 51px;
     line-height: 1;
   }
 
@@ -1940,9 +1940,6 @@ body {
     width: 75%;
   }
 
-  .sections {
-    row-gap: 3.5rem;
-  }
 
   .md\:block {
     display: block;
@@ -2004,8 +2001,8 @@ body {
     line-height: 1.25rem;
   }
 
-  .md\:\!leading-\[65px\] {
-    line-height: 65px !important;
+  .md\:\!leading-\[50px\] {
+    line-height: 50px !important;
   }
 
 
@@ -2180,10 +2177,8 @@ body {
   }
 
 }
-
 @media (max-width: 640px) {
   .sm\:w-4\/5 {
     width: 80%;
   }
- 
 }
