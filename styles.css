@@ -1447,7 +1447,7 @@ body {
 
 .nav-link {
   font-size: 12px;
-  padding-top: 1.0rem;
+  padding-top: 0.8rem;
   padding-bottom: 1.5rem;
   text-align: center;
   font-family: Figtree, sans-serif;
@@ -1486,7 +1486,7 @@ body {
   font-size: 2.25rem;
    font-weight: 800;
   line-height: 50px;
-   color: #2E565B;
+   /* color: #2E565B; */
 }
 
 .section-subheading {
@@ -1509,14 +1509,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  justify-content: space-around;
-  gap: 0.5rem;
+ 
+  gap: 1.5rem;
   text-align: center;
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 600;
-  /* text-transform: uppercase; */
+ }
+
+.icon-group-height{
+  height: 100px;
 }
 
 /* @media (min-width: 640px) {
@@ -1747,11 +1749,9 @@ body {
   }
 
   .nav-link {
-    font-size: 20px;
+    font-size: 17px;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 1.0rem;
-    padding-bottom: 1.5rem;
     /* line-height: 1.5rem; */
   }
 
@@ -1838,7 +1838,7 @@ body {
   }
 
   .nav-link {
-    font-size: 18px;
+    font-size: 16px;
 
   }
 
@@ -1925,8 +1925,9 @@ body {
 /* md */
 @media (min-width: 768px) {
 
+ 
   .md\:gap-3 {
-    gap: 2.0rem;
+    gap: 3.2rem;
   }
 
   .icons {
@@ -1950,7 +1951,7 @@ body {
   }
 
   .md\:h-\[55px\] {
-    height: 55px;
+    height: 50px;
   }
 
   .md\:w-1\/2 {
