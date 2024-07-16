@@ -2099,6 +2099,11 @@ body {
     height: 50vh;
   }
 
+  .section-5-map {
+    max-width: 100%;
+    height: auto;
+  }
+
 }
 
 /* custom for mobile */
@@ -2108,7 +2113,7 @@ body {
   }
 
   .content-slider-mobile {
-    height: 60vh !important;
+    height: 25vh !important;
   }
 
   .img-mobile {
@@ -2116,6 +2121,10 @@ body {
     border-radius: 30px;
     margin: auto;
     padding-top: 25px;
+  }
+
+  .background-section {
+    height: 190vh !important;
   }
 }
 
@@ -2128,15 +2137,19 @@ body {
   }
  
   .img-mobile {
-    width: 65%;
+    width: 85%;
     border-radius: 30px;
     margin: auto;
-    padding-top: 25px;
+    padding-top: 0px;
   }
 
   .slick-slide {
     margin-top: 40px !important;
    }
+
+   .background-section {
+    height: 190vh !important;
+  }
 }
 
 @media screen and (min-width: 390px) and (max-width: 649px) {
@@ -2147,6 +2160,10 @@ body {
   .img-mobile {
     max-width: 100%;
     margin: auto;
+  }
+
+  .background-section {
+    height: 190vh !important;
   }
  
 }
