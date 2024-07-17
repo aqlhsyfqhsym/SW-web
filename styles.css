@@ -920,7 +920,7 @@ select {
 }
 
 .w-2\/3 {
-  width: 66.666667%;
+  width:68.666667%;
 }
 
 .w-4 {
@@ -1483,9 +1483,9 @@ body {
 
 .section-heading {
   text-align: center;
-  font-size: 2.25rem;
+  font-size: 30px;
    font-weight: 800;
-  line-height: 50px;
+  line-height: 35px;
    /* color: #2E565B; */
 }
 
@@ -1623,10 +1623,6 @@ body {
   }
 }
 
-.site-plan {
-  display: flex;
-  align-items: stretch;
-}
 
 .bg-yellow-400 {
   background-color: #F57921 !important;
@@ -1654,8 +1650,7 @@ body {
   min-height: 50vh;
   /* Sets the minimum height of the section to 100% of the viewport height */
   position: relative;
-  height: 120vh;
-}
+ }
 
 /* Optional: Hide the img tag if you don't need to display it separately */
 /* .background-section img {
@@ -1742,6 +1737,18 @@ body {
   grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
 }
 
+.site-plan {
+  padding: 30px 92px;
+}
+ 
+
+.floor-plan{
+  height: 100vh;
+  width: 60%;
+
+
+}
+
 /* 2xl */
 @media (min-width: 1536px) {
   .section-subheading {
@@ -1765,6 +1772,11 @@ body {
 
 /* xl  */
 @media (min-width: 1280px) {
+  .xl\:w-2\/5 {
+    width: 40%;
+  }
+
+
   .lg\:top-0 {
     top: 0;
   }
@@ -2012,7 +2024,27 @@ body {
 
 /* sm: mobile  */
 @media (min-width: 300px) and (max-width: 767px) {
+.sm\:w-full {
+  width: 100%;
+}
 
+.site-plan {
+  padding: 30px 12px;
+}
+  .mobile-flex-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ .sm\:w-2\/3 {
+  width: 90%;
+ }
+  .sections {
+  
+    padding: 40px 20px;
+  }
+
+  
   .slick-slide {
  
     margin-top: 20px !important;
@@ -2038,11 +2070,7 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 
-  .site-plan {
-
-    flex-direction: column;
-  }
-
+  
   .content-slider-mobile {
     grid-column: span 2 / span 2;
     height: 25vh;
@@ -2123,9 +2151,7 @@ body {
     padding-top: 25px;
   }
 
-  .background-section {
-    height: 190vh !important;
-  }
+   
 }
 
 @media screen and (max-width: 389px) {
@@ -2146,26 +2172,17 @@ body {
   .slick-slide {
     margin-top: 40px !important;
    }
-
-   .background-section {
-    height: 190vh !important;
-  }
 }
 
 @media screen and (min-width: 390px) and (max-width: 649px) {
   .-top-28 {
     top: -16rem;
   }
- 
+
   .img-mobile {
     max-width: 100%;
     margin: auto;
   }
-
-  .background-section {
-    height: 190vh !important;
-  }
- 
 }
 
 @media screen and (min-width: 650px) and (max-width: 768px) {
