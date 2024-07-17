@@ -2124,9 +2124,10 @@ body {
     }
 
     .bg-custom-gradient {
-      height: 30vh;
-    }
+      /* height: 30vh; */
+      height: 55%;
 
+    }
 
     .h-custom {
       height: 18rem;
@@ -2182,10 +2183,7 @@ body {
 
   /* new responsive a */
   @media screen and  (max-width: 431px) {
-    .bg-custom-gradient {
-      height: 55%;
-    }
-
+    
     .img-mobile {
       width: 85%;
       border-radius: 30px;
