@@ -1746,6 +1746,11 @@ body {
   border: 4px solid #fff !important;
 }
 
+.group:hover .group-hover\:bg-orange\/50 {
+  border: 4px solid #f57921 !important;
+}
+
+
 .lifestyle-heading {
   line-height: 25px;
 }
@@ -1794,7 +1799,7 @@ body {
     width: 100%;
     height: 300px; /* Example height */
     background-repeat: no-repeat;
-    background-position: 247px 81px;
+    background-position: 250px 81px;
     z-index: 100; /* Higher z-index than .masterplan-hover */
   }
   .image-container:hover{
