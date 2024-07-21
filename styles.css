@@ -1794,7 +1794,7 @@ body {
     width: 100%;
     height: 300px; /* Example height */
     background-repeat: no-repeat;
-    background-position: 247px 81px;
+    background-position: 250px 81px;
     z-index: 100; /* Higher z-index than .masterplan-hover */
   }
   .image-container:hover{
@@ -2195,18 +2195,7 @@ body {
   .-top-28 {
     top: -19rem;
   }
-
-  /* .content-slider-mobile {
-      height: 25vh !important;
-    } */
-
-  /* .img-mobile {
-      width: 65%;
-      border-radius: 30px;
-      margin: auto;
-      padding-top: 25px;
-    } */
-
+ 
 
 }
 
