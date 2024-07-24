@@ -2175,6 +2175,10 @@ body {
 
   }
 
+  .xs\:pt-10 {
+padding-top:20px !important;
+  }
+
 
   .px-7 {
     padding-left: 20px;
