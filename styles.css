@@ -1811,6 +1811,12 @@ body {
     background-position: 291px 98px !important;
   }
 
+  .section-gated{
+    padding-left: 180px !important;
+    padding-right: 100px !important;
+
+   }
+
 }
 
 /* xl  */
@@ -1917,7 +1923,9 @@ body {
   
 
   .section-gated{
-    padding-left: 180px !important;
+    padding-left: 140px !important;
+    padding-right: 90px !important;
+
    }
 
   .lg\:px-7 {
@@ -2155,7 +2163,7 @@ body {
   }
 
   .mobile-carousel {
-    height: 45vh !important;
+    height: 50vh !important;
   }
 
   .xs\:block {
