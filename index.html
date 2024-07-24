@@ -895,37 +895,60 @@
 
 <!-- SECTION 6 -->
 <section class="sections relative" id="floor-plan">
-     <img src="./assets/intermediateunit/right-top.png" alt="" aria-hidden="true"
-      class="absolute top-0 md:z-50 z-10 right-0 aspect-auto" style="z-index: 10 !important;" />
-    <img src="./assets/intermediateunit/bottom-low.png" alt="" aria-hidden="true"
-      class="absolute md:z-50 bottom-0 z-1 left-0 transform aspect-auto" />
- 
-  <div id="default-carousel" class="relative object-cover w-full h-full object-top aspect-[1920/1080] -mb-[1px] carousel-height" data-carousel="static">
+  <img src="./assets/intermediateunit/right-top.png" alt="" aria-hidden="true"
+    class="absolute top-0 md:z-50 z-10 right-0 aspect-auto" style="z-index: 10 !important;" />
+  <img src="./assets/intermediateunit/bottom-low.png" alt="" aria-hidden="true"
+    class="absolute md:z-50 bottom-0 z-1 left-0 transform aspect-auto" />
+
+  <div id="default-carousel"
+    class="relative object-cover w-full h-full object-top aspect-[1920/1080] -mb-[1px] carousel-height mobile-carousel"
+    data-carousel="static">
     <!-- Carousel wrapper -->
     <div class="relative overflow-hidden h-full ">
       <!-- Item 1 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
         <img src="./assets/floorplan/corner-unit-lower.png"
-          class="object-contain absolute h-full block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-          alt="..." >
+          class=" block object-contain absolute h-full  w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="...">
+        <!-- mobile view item 1 -->
+        <h5 class="floorplan xs:block hidden">Corner Unit (Lower)</h5>
+        <img src="./assets/floorplan/mobile/corner-unit-lower.png"
+          class="xs:block hidden object-contain absolute h-full w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="...">
       </div>
       <!-- Item 2 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
         <img src="./assets/floorplan/corner-unit-upper.png"
           class="object-contain absolute h-full block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-          alt="..." >
+          alt="...">
+        <!-- mobile view item 2 -->
+        <h5 class="floorplan xs:block hidden">Corner Unit (Upper)</h5>
+        <img src="./assets/floorplan/mobile/corner-unit-upper.png"
+          class="xs:block hidden object-contain absolute h-full w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="...">
       </div>
       <!-- Item 3 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
         <img src="./assets/floorplan/intermediate-unit-upper.png"
-          class="object-contain absolute h-full block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-          alt="..." >
+          class="xs:hidden object-contain absolute h-full block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="...">
+        <!-- mobile view item 3 -->
+        <h5 class="floorplan xs:block hidden">Intermediate Unit (Upper)</h5>
+        <img src="./assets/floorplan/mobile/intermediate-unit-upper-1.png"
+          class="xs:block hidden object-contain absolute h-full w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="...">
       </div>
       <!-- Item 4 -->
       <div class="hidden duration-700 ease-in-out" data-carousel-item>
         <img src="./assets/floorplan/intermediate-unit-lower.png"
           class="object-contain absolute h-full block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-          alt="..." >
+          alt="...">
+
+        <!-- mobile view item 5 -->
+        <h5 class="floorplan xs:block hidden">Intermediate Unit (Lower)</h5>
+        <img src="./assets/floorplan/mobile/intermediate-unit-lower.png"
+          class="xs:block hidden object-contain absolute h-full w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+          alt="...">
       </div>
 
     </div>
@@ -957,19 +980,19 @@
   </div>
 
   <a href="#" rel="noopener noreferrer">
-    <button type="button"
-      class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 
+    <button type="button" class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 
     focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:focus:ring-yellow-900">
       Download eBrochure</button>
   </a>
 </section>
  
+ 
 
 <!-- SECTION 7 -->
-<section class="sections bg-[#2E565B] text-white !gap-0  sm:gap-2 section-gated" id="gallery">
+<section class="sections bg-[#2E565B] text-white !gap-0  sm:gap-2 section-gated lg:px-7" id="gallery">
   <div class="grid grid-cols-3 gap-2 sm:gap-3 slider-mobile">
     <section class="content-slider content-slider-mobile">
-      <div class="content   active ">
+      <div class="content active ">
         <h2 class="text-3xl font-bold">
           Gated & Guarded <br>
           Community
@@ -1127,7 +1150,6 @@
       </div>
 
     </section>
-
     <div class="col-span-2 pt-0">
       <section class="text-white bg-custom-gradient bg-opacity-75 slicker-mobile rounded-xl">
         <div class="center slider">
@@ -1199,16 +1221,7 @@
     </p>
   </div>
 
-  <!-- <div class="icon">
-      <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
-      </svg>
-      <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
-      </svg>
-    </div> -->
+ 
 
 </section>
 
@@ -1478,7 +1491,7 @@
         being a Sunway entity.
       </label>
     </div>
-    <div class="flex flex-col md:flex-row justify-center items-center gap-4 my-10">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-4  ">
       <!-- reCAPTCHA Element -->
       <!-- Please replace data-sitekey with your own sitekey -->
       <div class="g-recaptcha" data-sitekey="6Ld2HRMqAAAAABs_TEOgLTfLUwdinugVT2a4vOoB"
@@ -1548,25 +1561,6 @@
     </div>
   </div>
   <hr class="border-[#2A565A] border-b-2 border w-11/12 sm:w-4/5 xl:w-[90%]" />
-  <!-- <div
-      class="flex flex-col justify-start items-stretch text-[#808080] lg:text-base text-sm gap-4 w-11/12 sm:w-4/5 xl:w-[90%]">
-      <p class="text-justify lg:text-start text-sm">
-        Disclaimer: The information contained herein is subject to change
-        without notification as may be required by relevant authorities or the
-        developer&apos;s consultants and cannot form part of an offer or
-        contract. The name of this development is subject to approval by
-        relevant authorities. Whilst every care is taken in providing this
-        information, the owner, developer and managers cannot be held liable
-        for variations. All illustrations and pictures are artist impressions
-        only and all measurements are approximate. The items are subject to
-        variations, modifications and substitutions as may be recommended by
-        the Company&apos;s consultants and / or relevant Approving
-        Authorities.
-      </p>
-      <p class="">
-        © 2024 Sunway Bintang Sdn Bhd (199201007071). All Rights Reserved.
-      </p>
-    </div> -->
   <div
     class="flex flex-col justify-start items-stretch text-[#808080] lg:text-base text-sm gap-4 w-11/12 sm:w-4/5 xl:w-[90%]">
     <p>
