@@ -1828,7 +1828,7 @@ body {
     top: 0;
     left: 0;
     opacity: 1; /* Initially show the overlay */
-    animation: fadeInOut 0.8s infinite alternate; /* Apply the fadeInOut animation */
+    animation: fadeInOut 0.9s infinite alternate; /* Apply the fadeInOut animation */
   }
   
   @keyframes fadeInOut {
@@ -2173,6 +2173,10 @@ body {
   .xs\:hidden {
     display: none !important;
 
+  }
+
+  .xs\:pt-10 {
+padding-top:20px !important;
   }
 
 
