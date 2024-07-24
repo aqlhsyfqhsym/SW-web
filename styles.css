@@ -906,12 +906,7 @@ select {
 
 }
 
-
-.section-gated {
-  padding: 0px 100px 0px 180px;
-}
-
-
+ 
 .\!min-h-0 {
   min-height: 0px !important;
 }
@@ -1768,6 +1763,10 @@ body {
   padding-right: 20px;
 }
 
+.sm\:hidden {
+  display: none;
+}
+
 @media (min-width: 1919px) {
 
 
@@ -1802,10 +1801,7 @@ body {
     width: 100%;
   }
 
-  .floorplan-site {
-    width: 50% !important;
 
-  }
 
 }
 
@@ -1918,17 +1914,22 @@ body {
 
 /* lg */
 @media (min-width: 1024px) {
+  
+
+  .section-gated{
+    padding-left: 180px !important;
+   }
 
   .lg\:px-7 {
     padding-left: 120px;
     padding-right: 120px;
   }
 
-
-  .floorplan-site {
-    width: 60%;
-
+  .xl\:px-15 {
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
   }
+
 
   .floorplan {
     font-size: 51px !important;
@@ -2034,6 +2035,16 @@ body {
 
 /* md */
 @media (min-width: 767px) {
+
+  .section-gated {
+ 
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+    
+  }
+
   .floorplan {
     font-size: 23px;
     line-height: 30.2px;
@@ -2127,6 +2138,36 @@ body {
 /* sm: mobile  */
 @media (min-width: 300px) and (max-width: 767px) {
 
+  .content-slider .content.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .content {
+    padding: 0px;
+  }
+
+  .section-gated {
+    height: 58vh;
+  }
+
+  .mobile-carousel {
+    height: 45vh !important;
+  }
+
+  .xs\:block {
+    display: block !important;
+  }
+
+  .xs\:hidden {
+    display: none !important;
+
+  }
+
+
   .px-7 {
     padding-left: 20px;
     padding-right: 20px;
@@ -2152,20 +2193,12 @@ body {
   }
 
   .sections {
-
+    row-gap: 1.125rem;
     padding: 40px 20px;
   }
 
-
   .slick-slide {
-
     margin-top: 20px !important;
-
-  }
-
-  .content {
-    padding-top: 0px;
-
   }
 
   .icon-group {
@@ -2191,14 +2224,6 @@ body {
     width: 20rem;
   }
 
-  /* 
-  .mobile-padding {
-    padding: 40px;
-  } */
-
-  .section-gated {
-    padding: 0px 80px;
-  }
 
   .slicker-mobile {
     border-radius: 8px;
@@ -2214,11 +2239,6 @@ body {
     /* Scale down the non-center slides */
   }
 
-  .bg-custom-gradient {
-    /* height: 30vh; */
-    height: 55%;
-
-  }
 
   .h-custom {
     height: 18rem;
@@ -2245,9 +2265,17 @@ body {
 }
 
 /* custom for mobile */
-@media screen and (max-width: 321px) {
+@media screen and (max-width: 376px) {
   .-top-28 {
     top: -19rem;
+  }
+
+  .section-gated {
+    height: 95vh !important;
+  }
+
+  .mobile-carousel {
+    height: 55vh !important;
   }
 
 }
@@ -2269,6 +2297,13 @@ body {
     margin: 20px auto;
     padding-top: 0px;
   }
+
+  .section-gated {
+    max-height: 100vh;
+    min-height: 70vh;
+  }
+
+
 }
 
 
