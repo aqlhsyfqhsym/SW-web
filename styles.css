@@ -1924,6 +1924,11 @@ body {
     padding-right: 120px;
   }
 
+  .xl\:px-15 {
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+  }
+
 
   .floorplan-site {
     width: 60%;
