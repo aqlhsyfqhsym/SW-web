@@ -1806,11 +1806,7 @@ body {
 }
 
 @media (min-width : 1536px) {
-
-  .image-container {
-    background-position: 291px 98px !important;
-  }
-
+ 
   .section-gated{
     padding-left: 180px !important;
     padding-right: 100px !important;
@@ -1821,31 +1817,35 @@ body {
 
 /* xl  */
 @media (min-width: 1280px) {
-
   .image-container {
     position: relative;
     display: inline-block;
+    overflow: hidden; /* Ensure overflow is hidden to prevent overflow issues with animations */
   }
-
+  
   .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
-    /* Initially hide the overlay */
-    transition: opacity 0.3s ease;
-    /* Smooth transition for opacity change */
+    opacity: 1; /* Initially show the overlay */
+    animation: fadeInOut 0.8s infinite alternate; /* Apply the fadeInOut animation */
   }
-
-  .image-container:hover .overlay {
-    opacity: 1;
-    /* Show overlay on hover */
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0; /* Start with overlay hidden */
+    }
+    100% {
+      opacity: 1; /* Show overlay */
+    }
   }
 
   .masterplan-hover {
     display: block;
+    width: 100%; /* Ensure the hover image fills its container */
+    height: auto; /* Maintain aspect ratio */
   }
-
+  
   .floor-plan {
     height: 95vh;
     width: 60%;
