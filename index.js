@@ -1679,6 +1679,29 @@ $(document).ready(function () {
           email: formPayload.email,
           mobile: formPayload.mobile
         });
+
+         // Check if UTM details were injected into the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const utm_source = urlParams.get('utm_source');
+    const utm_medium = urlParams.get('utm_medium');
+    const utm_campaign = urlParams.get('utm_campaign');
+    const utm_term = urlParams.get('utm_term');
+    const utm_content = urlParams.get('utm_content');
+
+    if (utm_source || utm_medium || utm_campaign || utm_term || utm_content) {
+      console.log('UTM details were injected into the URL:', {
+        utm_source,
+        utm_medium,
+        utm_campaign,
+        utm_term,
+        utm_content
+      });
+    } else {
+      console.log('No UTM details were injected into the URL.');
+    }
+
+
+    
         showSuccessNotification();
       })
       .catch((error) => {
