@@ -4,33 +4,38 @@
 const formEndpoint =
   "https://pms-integrate.sunwayproperty.com/api/global-test/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=2Tog_HqjDLVMFLx2dwry54BAx5ZdZRU0LUuoz7nsf5I";
 // Default payload values hardcoded
+// const payloadDefaults = {
+//   phase_integration_id: "2480",
+//   source_integration_id: "7001",
+//   campaign_integration_id: "",
+//   utm_source: "utm_source_value_from_url",
+//   utm_medium: "utm_medium_value_from_url",
+//   utm_campaign: "utm_campaign_value_from_url",
+//   utm_term: "utm_term_value_from_url",
+//   utm_content: "utm_content_value_from_url",
+//   location: "",
+//   preference: "",
+//   notes: "",
+// }; 
+
 const payloadDefaults = {
+  name: "Test Lead 2 27/7 02.47am",
+  mobile: "60129543559",
+  email: "testemail@test.com",
   phase_integration_id: "2480",
   source_integration_id: "7001",
   campaign_integration_id: "",
-  utm_source: "utm_source_value_from_url",
-  utm_medium: "utm_medium_value_from_url",
-  utm_campaign: "utm_campaign_value_from_url",
+  utm_source: "utm_source_value_from_url",     // These will be dynamically replaced
+  utm_medium: "utm_medium_value_from_url",     // with actual values from URL params
+  utm_campaign: "utm_campaign_value_from_url", // when the form is submitted.
   utm_term: "utm_term_value_from_url",
   utm_content: "utm_content_value_from_url",
   location: "",
   preference: "",
-  notes: "",
+  notes: ""
 };
 
- 
 
-function extractUTMParametersFromURL() {
-  const urlParams = new URLSearchParams(window.location.search);
-  return {
-    utm_source: urlParams.get("utm_source") || "",
-    utm_medium: urlParams.get("utm_medium") || "",
-    utm_campaign: urlParams.get("utm_campaign") || "",
-    utm_term: urlParams.get("utm_term") || "",
-    utm_content: urlParams.get("utm_content") || "",
-  };
-}
- 
 var timeoutID;
 var recaptchaSuccess = false;
 
@@ -1636,13 +1641,7 @@ $(document).ready(function () {
       email,
       mobile: `${countryCode.replace("+", "")}${phone}`,
       ...payloadDefaults,
-      ...extractUTMParametersFromURL(),
-    };
-
-    const utmParams = extractUTMParametersFromURL();
-    Object.keys(utmParams).forEach((key) => {
-      formPayload[key] = utmParams[key];
-    });
+     };
 
     // Show submitting notification
     showSubmittingNotification();
@@ -1663,34 +1662,7 @@ $(document).ready(function () {
           name: formPayload.name,
           email: formPayload.email,
           mobile: formPayload.mobile,
-        });
-
-        // Check if UTM details were injected into the URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const utm_source = urlParams.get("utm_source");
-        const utm_medium = urlParams.get("utm_medium");
-        const utm_campaign = urlParams.get("utm_campaign");
-        const utm_term = urlParams.get("utm_term");
-        const utm_content = urlParams.get("utm_content");
-
-        if (
-          utm_source ||
-          utm_medium ||
-          utm_campaign ||
-          utm_term ||
-          utm_content
-        ) {
-          console.log("UTM details were injected into the URL:", {
-            utm_source,
-            utm_medium,
-            utm_campaign,
-            utm_term,
-            utm_content,
-          });
-        } else {
-          console.log("No UTM details were injected into the URL.");
-        }
-
+        }); 
         showSuccessNotification();
       })
       .catch((error) => {
