@@ -22,11 +22,11 @@ const payloadDefaults = {
 function extractUTMParametersFromURL() {
   const urlParams = new URLSearchParams(window.location.search);
   return {
-    utm_source: urlParams.get('utm_source') || '',
-    utm_medium: urlParams.get('utm_medium') || '',
-    utm_campaign: urlParams.get('utm_campaign') || '',
-    utm_term: urlParams.get('utm_term') || '',
-    utm_content: urlParams.get('utm_content') || '',
+    utm_source: urlParams.get('utm_source_value_from_url') || '',
+    utm_medium: urlParams.get('utm_medium_value_from_url') || '',
+    utm_campaign: urlParams.get('utm_campaign_value_from_url') || '',
+    utm_term: urlParams.get('utm_term_value_from_url') || '',
+    utm_content: urlParams.get('utm_content_value_from_url') || '',
   };
 }
 
@@ -48,7 +48,7 @@ form.addEventListener('submit', function(event) {
   payloadDefaults.utm_content = utmParams.utm_content;
 
   // Log updated payloadDefaults
-  console.log('==>Updated Payload:', payloadDefaults); })
+  console.log('==>Updated Payload:', formPayload, payloadDefaults); })
 
 
 var timeoutID;
