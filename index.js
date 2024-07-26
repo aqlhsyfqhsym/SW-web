@@ -4,15 +4,30 @@
 const formEndpoint =
    "https://pms-integrate.sunwayproperty.com/api/global-test/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=2Tog_HqjDLVMFLx2dwry54BAx5ZdZRU0LUuoz7nsf5I";
 // Default payload values hardcoded
+// const payloadDefaults = {
+//   phase_integration_id: "2480",
+//   source_integration_id: "7001",
+//   campaign_integration_id: "",
+//   utm_source: "utm_source_value_from_url",
+//   utm_medium: "utm_medium_value_from_url",
+//   utm_campaign: "utm_campaign_value_from_url",
+//   utm_term: "utm_term_value_from_url",
+//   utm_content: "utm_content_value_from_url",
+//   location: "",
+//   preference: "",
+//   notes: "",
+// };
+
+// Default payload values hardcoded
 const payloadDefaults = {
   phase_integration_id: "2480",
   source_integration_id: "7001",
   campaign_integration_id: "",
-  utm_source: "utm_source_value_from_url",
-  utm_medium: "utm_medium_value_from_url",
-  utm_campaign: "utm_campaign_value_from_url",
-  utm_term: "utm_term_value_from_url",
-  utm_content: "utm_content_value_from_url",
+  utm_source: "",
+  utm_medium: "",
+  utm_campaign: "",
+  utm_term: "",
+  utm_content: "",
   location: "",
   preference: "",
   notes: "",
@@ -22,34 +37,13 @@ const payloadDefaults = {
 function extractUTMParametersFromURL() {
   const urlParams = new URLSearchParams(window.location.search);
   return {
-    utm_source: urlParams.get('utm_source_value_from_url') || '',
-    utm_medium: urlParams.get('utm_medium_value_from_url') || '',
-    utm_campaign: urlParams.get('utm_campaign_value_from_url') || '',
-    utm_term: urlParams.get('utm_term_value_from_url') || '',
-    utm_content: urlParams.get('utm_content_value_from_url') || '',
+    utm_source: urlParams.get('utm_source') || '',
+    utm_medium: urlParams.get('utm_medium') || '',
+    utm_campaign: urlParams.get('utm_campaign') || '',
+    utm_term: urlParams.get('utm_term') || '',
+    utm_content: urlParams.get('utm_content') || '',
   };
 }
-
-const form = document.getElementById('enquiry-form'); // Replace with your actual form ID
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent form submission
-
-  // Extract UTM parameters from current URL
-  const utmParams = extractUTMParametersFromURL();
-
-  // Log extracted UTM parameters
-  console.log('Extracted UTM Parameters:', utmParams);
-
-  // Update payloadDefaults with extracted UTM parameters
-  payloadDefaults.utm_source = utmParams.utm_source;
-  payloadDefaults.utm_medium = utmParams.utm_medium;
-  payloadDefaults.utm_campaign = utmParams.utm_campaign;
-  payloadDefaults.utm_term = utmParams.utm_term;
-  payloadDefaults.utm_content = utmParams.utm_content;
-
-  // Log updated payloadDefaults
-  console.log('==>Updated Payload:', formPayload, payloadDefaults); })
-
 
 var timeoutID;
 var recaptchaSuccess = false;
@@ -1659,6 +1653,11 @@ $(document).ready(function () {
       ...payloadDefaults,
     };
 
+    const utmParams = extractUTMParametersFromURL();
+    Object.keys(utmParams).forEach(key => {
+      formPayload[key] = utmParams[key];
+    });
+
     // Show submitting notification
     showSubmittingNotification();
     $("#form-submit").prop("disabled", true);
@@ -1701,7 +1700,7 @@ $(document).ready(function () {
     }
 
 
-    
+
         showSuccessNotification();
       })
       .catch((error) => {
