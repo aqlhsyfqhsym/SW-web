@@ -1674,6 +1674,11 @@ $(document).ready(function () {
       .then((response) => {
         console.log(JSON.stringify(response, null, 2));
         console.log(response);
+        console.log('==>Submitted Payload:', {
+          name: formPayload.name,
+          email: formPayload.email,
+          mobile: formPayload.mobile
+        });
         showSuccessNotification();
       })
       .catch((error) => {
