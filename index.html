@@ -895,17 +895,17 @@
 
 <!-- SECTION 6 -->
 <section class="sections relative pt-0 xs:pt-10 !gap-0" id="floor-plan">
-  <img src="./assets/intermediateunit/right-top.png" alt="" aria-hidden="true"
-    class="absolute top-0 md:z-50 z-10 right-0 aspect-auto" style="z-index: 10 !important;" />
-  <img src="./assets/intermediateunit/bottom-low.png" alt="" aria-hidden="true"
-    class="absolute md:z-50 bottom-0 z-1 left-0 transform aspect-auto" />
-
+     <img src="./assets/intermediateunit/right-top.png" alt="" aria-hidden="true"
+      class="absolute top-0 md:z-50 z-10 right-0 aspect-auto" style="z-index: 10 !important;" />
+    <img src="./assets/intermediateunit/bottom-low.png" alt="" aria-hidden="true"
+      class="absolute md:z-50 bottom-0 z-1 left-0 transform aspect-auto" />
+ 
   <div id="default-carousel"
     class="relative object-cover w-full h-full object-top aspect-[1920/1080] -mb-[1px] carousel-height mobile-carousel"
     data-carousel="static">
     <!-- Carousel wrapper -->
     <div class="relative overflow-hidden h-full ">
-
+   
       <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
         <img src="./assets/floorplan/intermediate-unit-lower.png"
           class="object-contain absolute h-full block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
@@ -976,19 +976,15 @@
     </button>
   </div>
 
-  <a href="#" rel="noopener noreferrer" download="Sunway_Wellesley-Serene-Villas.pdf">
-    <button type="button" id="downloadButton" class="mt-38 text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 
+  <a  rel="noopener noreferrer"  href="./assets/download/Sunway_Wellesley-Serene-Villas.pdf" download="Sunway_Wellesley-Serene-Villas.pdf">
+    <button  onclick="downloadPDF()" target="_blank"  type="button" class="mt-38 text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 
     focus:ring-yellow-300 font-medium rounded-full text-xl px-8 py-5 text-center dark:focus:ring-yellow-900">
       Download eBrochure</button>
   </a>
 
-  <button type="button" id="downloadButton" class="mt-38 text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 
-focus:ring-yellow-300 font-medium rounded-full text-xl px-8 py-5 text-center dark:focus:ring-yellow-900">
-    Download eBrochure
-  </button>
 
 </section>
-
+ 
 
 <!-- SECTION 7 -->
 <section class="sections bg-[#2E565B] text-white !gap-0  sm:gap-2 section-gated" id="gallery">
@@ -1573,7 +1569,7 @@ focus:ring-yellow-300 font-medium rounded-full text-xl px-8 py-5 text-center dar
     </div>
   </div>
   <hr class="border-[#2A565A] border-b-2 border w-11/12 sm:w-4/5 xl:w-[90%]" />
-
+ 
   <div
     class="flex flex-col justify-start items-stretch text-[#808080] lg:text-base text-sm gap-4 w-11/12 sm:w-4/5 xl:w-[90%]">
     <p>
@@ -1713,32 +1709,22 @@ focus:ring-yellow-300 font-medium rounded-full text-xl px-8 py-5 text-center dar
     $('.content-slider .content').eq(currentSlide).addClass('active');
   });
 
+ 
+  function downloadPDF() {
+  const link = document.createElement('a');
+  link.href = './assets/download/Sunway_Wellesley-Serene-Villas.pdf';
+  link.download = 'Sunway_Wellesley-Serene-Villas.pdf';
+  
+  // Append the link to the body
+  document.body.appendChild(link);
+  
+  // Trigger the click event of the link
+  link.click();
+  
+  // Clean up
+  document.body.removeChild(link);
+}
 
-
-  document.addEventListener("DOMContentLoaded", function () {
-    // Find the download button by its ID
-    var downloadButton = document.getElementById('downloadButton');
-
-    // Add click event listener
-    downloadButton.addEventListener('click', function () {
-      // Create a virtual link to trigger the download
-      var link = document.createElement('a');
-      link.href = './assets/download/Sunway_Wellesley-Serene-Villas.pdf'; // Replace with your PDF file URL
-      link.setAttribute('download', 'Sunway_Wellesley-Serene-Villas.pdf');
-
-      // Append the link to the body
-      document.body.appendChild(link);
-
-      // Trigger the click event of the link
-      link.click();
-
-      // Clean up
-      document.body.removeChild(link);
-    });
-  });
 </script>
-
-
-
 
 </html>
