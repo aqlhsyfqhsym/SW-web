@@ -4,36 +4,36 @@
 const formEndpoint =
   "https://pms-integrate.sunwayproperty.com/api/global-test/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=2Tog_HqjDLVMFLx2dwry54BAx5ZdZRU0LUuoz7nsf5I";
 // Default payload values hardcoded
-// const payloadDefaults = {
-//   phase_integration_id: "2480",
-//   source_integration_id: "7001",
-//   campaign_integration_id: "",
-//   utm_source: "utm_source_value_from_url",
-//   utm_medium: "utm_medium_value_from_url",
-//   utm_campaign: "utm_campaign_value_from_url",
-//   utm_term: "utm_term_value_from_url",
-//   utm_content: "utm_content_value_from_url",
-//   location: "",
-//   preference: "",
-//   notes: "",
-// }; 
-
 const payloadDefaults = {
-  name: "Test Lead 2 27/7 02.47am",
-  mobile: "60129543559",
-  email: "testemail@test.com",
   phase_integration_id: "2480",
   source_integration_id: "7001",
   campaign_integration_id: "",
-  utm_source: "utm_source_value_from_url",     // These will be dynamically replaced
-  utm_medium: "utm_medium_value_from_url",     // with actual values from URL params
-  utm_campaign: "utm_campaign_value_from_url", // when the form is submitted.
+  utm_source: "utm_source_value_from_url",
+  utm_medium: "utm_medium_value_from_url",
+  utm_campaign: "utm_campaign_value_from_url",
   utm_term: "utm_term_value_from_url",
   utm_content: "utm_content_value_from_url",
   location: "",
   preference: "",
-  notes: ""
-};
+  notes: "",
+}; 
+
+// const payloadDefaults = {
+//   name: "Test Lead 2 27/7 02.47am",
+//   mobile: "60129543559",
+//   email: "testemail@test.com",
+//   phase_integration_id: "2480",
+//   source_integration_id: "7001",
+//   campaign_integration_id: "",
+//   utm_source: "utm_source_value_from_url",     
+//   utm_medium: "utm_medium_value_from_url",      
+//   utm_campaign: "utm_campaign_value_from_url",  
+//   utm_term: "utm_term_value_from_url",
+//   utm_content: "utm_content_value_from_url",
+//   location: "",
+//   preference: "",
+//   notes: ""
+// };
 
 
 var timeoutID;
