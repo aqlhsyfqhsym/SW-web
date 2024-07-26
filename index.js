@@ -17,6 +17,39 @@ const payloadDefaults = {
   notes: "",
 };
 
+// Function to extract UTM parameters from URL query string
+function extractUTMParametersFromURL() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return {
+    utm_source: urlParams.get('utm_source') || '',
+    utm_medium: urlParams.get('utm_medium') || '',
+    utm_campaign: urlParams.get('utm_campaign') || '',
+    utm_term: urlParams.get('utm_term') || '',
+    utm_content: urlParams.get('utm_content') || '',
+  };
+}
+
+const form = document.getElementById('enquiry-form'); // Replace with your actual form ID
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Extract UTM parameters from current URL
+  const utmParams = extractUTMParametersFromURL();
+
+  // Log extracted UTM parameters
+  console.log('Extracted UTM Parameters:', utmParams);
+
+  // Update payloadDefaults with extracted UTM parameters
+  payloadDefaults.utm_source = utmParams.utm_source;
+  payloadDefaults.utm_medium = utmParams.utm_medium;
+  payloadDefaults.utm_campaign = utmParams.utm_campaign;
+  payloadDefaults.utm_term = utmParams.utm_term;
+  payloadDefaults.utm_content = utmParams.utm_content;
+
+  // Log updated payloadDefaults
+  console.log('==>Updated Payload:', payloadDefaults); })
+
+
 var timeoutID;
 var recaptchaSuccess = false;
 
