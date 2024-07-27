@@ -864,7 +864,7 @@
   </h2>
 
   <video class="h-1/2 rounded-lg mt-48 border md:w-1/2 sm:w-3/4" controls>
-    <source src="/docs/videos/flowbite.mp4" type="video/mp4">
+    <source src="./assets/Sunway_Wellesley_Serene Villas_Welcome_Home_To_Serenity.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
@@ -894,7 +894,7 @@
 
 
 <!-- SECTION 6 -->
-<section class="sections relative pt-0 xs:pt-10" id="floor-plan">
+<section class="sections relative pt-0 xs:pt-10 !gap-0" id="floor-plan">
      <img src="./assets/intermediateunit/right-top.png" alt="" aria-hidden="true"
       class="absolute top-0 md:z-50 z-10 right-0 aspect-auto" style="z-index: 10 !important;" />
     <img src="./assets/intermediateunit/bottom-low.png" alt="" aria-hidden="true"
@@ -976,11 +976,13 @@
     </button>
   </div>
 
-  <a href="#" rel="noopener noreferrer">
-    <button type="button" class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 
+  <a  rel="noopener noreferrer"  href="./assets/download/Sunway_Wellesley-Serene-Villas.pdf" download="Sunway_Wellesley-Serene-Villas.pdf">
+    <button  onclick="downloadPDF()" target="_blank"  type="button" class="mt-38 text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 
     focus:ring-yellow-300 font-medium rounded-full text-xl px-8 py-5 text-center dark:focus:ring-yellow-900">
       Download eBrochure</button>
   </a>
+
+
 </section>
  
 
@@ -1706,6 +1708,22 @@
     $('.content-slider .content').removeClass('active');
     $('.content-slider .content').eq(currentSlide).addClass('active');
   });
+
+ 
+  function downloadPDF() {
+  const link = document.createElement('a');
+  link.href = './assets/download/Sunway_Wellesley-Serene-Villas.pdf';
+  link.download = 'Sunway_Wellesley-Serene-Villas.pdf';
+  
+  // Append the link to the body
+  document.body.appendChild(link);
+  
+  // Trigger the click event of the link
+  link.click();
+  
+  // Clean up
+  document.body.removeChild(link);
+}
 
 </script>
 
