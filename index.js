@@ -3,38 +3,6 @@
 //    "https://pms-integrate.sunwayproperty.com/api/web-wellesley/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=EhD-90gZi81_2Fa8UTV4CXnaoAy-759teYWa840d6c8";
 const formEndpoint =
   "https://pms-integrate.sunwayproperty.com/api/global-test/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=2Tog_HqjDLVMFLx2dwry54BAx5ZdZRU0LUuoz7nsf5I";
-// Default payload values hardcoded
-const payloadDefaults = {
-  phase_integration_id: "2480",
-  source_integration_id: "7001",
-  campaign_integration_id: "",
-  utm_source: "utm_source_value_from_url",
-  utm_medium: "utm_medium_value_from_url",
-  utm_campaign: "utm_campaign_value_from_url",
-  utm_term: "utm_term_value_from_url",
-  utm_content: "utm_content_value_from_url",
-  location: "",
-  preference: "",
-  notes: "",
-}; 
-
-// const payloadDefaults = {
-//   name: "Test Lead 2 27/7 02.47am",
-//   mobile: "60129543559",
-//   email: "testemail@test.com",
-//   phase_integration_id: "2480",
-//   source_integration_id: "7001",
-//   campaign_integration_id: "",
-//   utm_source: "utm_source_value_from_url",     
-//   utm_medium: "utm_medium_value_from_url",      
-//   utm_campaign: "utm_campaign_value_from_url",  
-//   utm_term: "utm_term_value_from_url",
-//   utm_content: "utm_content_value_from_url",
-//   location: "",
-//   preference: "",
-//   notes: ""
-// };
-
 
 var timeoutID;
 var recaptchaSuccess = false;
@@ -1599,6 +1567,41 @@ function hideSubmittingNotification() {
     .addClass("-bottom-full opacity-0");
 }
 
+/**
+ * The function `getQueryParams` extracts query parameters from a URL and returns them as an object.
+ * @param {string} url - The `getQueryParams` function is designed to extract query parameters from a URL
+ * string. It takes a URL as input and returns an object containing key-value pairs of the query
+ * parameters.
+ * @returns {Object<string, string>} The function `getQueryParams` returns an object containing key-value pairs of query
+ * parameters parsed from the input URL.
+ */
+function getQueryParams(url) {
+  let params = {};
+  (url + '?').split('?')[1].split('&').forEach(pair => {
+    pair = (pair + '=').split('=').map(decodeURIComponent);
+    if (pair[0].length) {
+      params[pair[0]] = pair[1];
+    }
+  });
+  return params;
+}
+
+
+/**
+ * The function `updateURLWithPayload` updates the URL query parameters based on the provided payload object.
+ */
+function updateURLWithPayload(payload) {
+  const url = new URL(window.location.href);
+  Object.keys(payload).forEach(key => {
+    if (payload[key] !== undefined && payload[key] !== null && payload[key] !== "") {
+      url.searchParams.set(key, payload[key]);
+    } else {
+      url.searchParams.delete(key);
+    }
+  });
+  history.replaceState(null, '', url.toString());
+}
+
 $(document).ready(function () {
   // Fetch country codes and populate select element
   // countries.then(populateCountryCodes);
@@ -1635,13 +1638,28 @@ $(document).ready(function () {
       return;
     }
 
-    // Form payload
+    // Extract URL parameters
+    const urlParams = getQueryParams(window.location.href);
+
+    // Form payload with URL parameters
     const formPayload = {
       name: fullname,
       email,
       mobile: `${countryCode.replace("+", "")}${phone}`,
-      ...payloadDefaults,
-     };
+      phase_integration_id: "2480",
+      source_integration_id: urlParams.SID || "7001",
+      campaign_integration_id: urlParams.campaign_integration_id || "",
+      utm_source: urlParams.utm_source || "",
+      utm_medium: urlParams.utm_medium || "",
+      utm_campaign: urlParams.utm_campaign || "",
+      utm_term: urlParams.utm_term || "",
+      utm_content: urlParams.utm_content || "",
+    };
+
+    console.log('ammar test payload:', formPayload)
+
+    // Update the URL with the current payload parameters
+    updateURLWithPayload(formPayload);
 
     // Show submitting notification
     showSubmittingNotification();
