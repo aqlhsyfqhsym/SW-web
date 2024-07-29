@@ -1,8 +1,7 @@
 // Endpoint for form submission
-//  const formEndpoint =
-//    "https://pms-integrate.sunwayproperty.com/api/web-wellesley/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=EhD-90gZi81_2Fa8UTV4CXnaoAy-759teYWa840d6c8";
-const formEndpoint =
-  "https://pms-integrate.sunwayproperty.com/api/global-test/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=2Tog_HqjDLVMFLx2dwry54BAx5ZdZRU0LUuoz7nsf5I";
+  const formEndpoint ="https://pms-integrate.sunwayproperty.com/api/web-wellesley/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=EhD-90gZi81_2Fa8UTV4CXnaoAy-759teYWa840d6c8";
+// const formEndpoint =
+//   "https://pms-integrate.sunwayproperty.com/api/global-test/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=2Tog_HqjDLVMFLx2dwry54BAx5ZdZRU0LUuoz7nsf5I";
 
 var timeoutID;
 var recaptchaSuccess = false;
