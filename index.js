@@ -1648,11 +1648,11 @@ $(document).ready(function () {
       phase_integration_id: "2480",
       source_integration_id: urlParams.SID || "7001",
       campaign_integration_id: urlParams.campaign_integration_id || "",
-      utm_source: urlParams.utm_source || "",
-      utm_medium: urlParams.utm_medium || "",
-      utm_campaign: urlParams.utm_campaign || "",
-      utm_term: urlParams.utm_term || "",
-      utm_content: urlParams.utm_content || "",
+      utm_source: urlParams.utm_source_value_from_url || "google",
+      utm_medium: urlParams.utm_medium_value_from_url || "",
+      utm_campaign: urlParams.utm_campaign_value_from_url || "",
+      utm_term: urlParams.utm_term_value_from_url || "",
+      utm_content: urlParams.utm_content_value_from_url || "",
     };
 
     console.log('ammar test payload:', formPayload)

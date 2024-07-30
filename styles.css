@@ -894,6 +894,10 @@ select {
   margin-top: 48px;
 }
 
+.mb-48 {
+  margin-bottom: 42px;
+}
+
 .mt-38 {
   margin-top: 38px;
 }
@@ -1772,6 +1776,9 @@ body {
   display: none;
 }
 
+ 
+
+
 @media (min-width: 1919px) {
 
 
@@ -1805,8 +1812,6 @@ body {
     height: auto;
     width: 100%;
   }
-
-
 
 }
 
