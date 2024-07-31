@@ -1,5 +1,6 @@
 // Endpoint for form submission
-  const formEndpoint ="https://pms-integrate.sunwayproperty.com/api/web-wellesley/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=EhD-90gZi81_2Fa8UTV4CXnaoAy-759teYWa840d6c8";
+const formEndpoint =
+  "https://pms-integrate.sunwayproperty.com/api/web-wellesley/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=EhD-90gZi81_2Fa8UTV4CXnaoAy-759teYWa840d6c8";
 // const formEndpoint =
 //   "https://pms-integrate.sunwayproperty.com/api/global-test/triggers/new/invoke?api-version=2022-05-01&sp=%2Ftriggers%2Fnew%2Frun&sv=1.0&sig=2Tog_HqjDLVMFLx2dwry54BAx5ZdZRU0LUuoz7nsf5I";
 
@@ -1576,29 +1577,36 @@ function hideSubmittingNotification() {
  */
 function getQueryParams(url) {
   let params = {};
-  (url + '?').split('?')[1].split('&').forEach(pair => {
-    pair = (pair + '=').split('=').map(decodeURIComponent);
-    if (pair[0].length) {
-      params[pair[0]] = pair[1];
-    }
-  });
+  (url + "?")
+    .split("?")[1]
+    .split("&")
+    .forEach((pair) => {
+      pair = (pair + "=").split("=").map(decodeURIComponent);
+      if (pair[0].length) {
+        params[pair[0]] = pair[1];
+        console.log(`Key: ${pair[0]}, Value: ${pair[1]}`);
+      }
+    });
   return params;
 }
-
 
 /**
  * The function `updateURLWithPayload` updates the URL query parameters based on the provided payload object.
  */
 function updateURLWithPayload(payload) {
   const url = new URL(window.location.href);
-  Object.keys(payload).forEach(key => {
-    if (payload[key] !== undefined && payload[key] !== null && payload[key] !== "") {
+  Object.keys(payload).forEach((key) => {
+    if (
+      payload[key] !== undefined &&
+      payload[key] !== null &&
+      payload[key] !== ""
+    ) {
       url.searchParams.set(key, payload[key]);
     } else {
       url.searchParams.delete(key);
     }
   });
-  history.replaceState(null, '', url.toString());
+  history.replaceState(null, "", url.toString());
 }
 
 $(document).ready(function () {
@@ -1655,7 +1663,7 @@ $(document).ready(function () {
       utm_content: urlParams.utm_content_value_from_url || "",
     };
 
-    console.log('ammar test payload:', formPayload)
+    console.log("ammar test payload:", formPayload);
 
     // Update the URL with the current payload parameters
     updateURLWithPayload(formPayload);
@@ -1679,7 +1687,7 @@ $(document).ready(function () {
           name: formPayload.name,
           email: formPayload.email,
           mobile: formPayload.mobile,
-        }); 
+        });
         showSuccessNotification();
       })
       .catch((error) => {
