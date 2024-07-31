@@ -1656,7 +1656,7 @@ $(document).ready(function () {
       phase_integration_id: "2480",
       source_integration_id: urlParams.SID || "7001",
       campaign_integration_id: urlParams.campaign_integration_id || "",
-      utm_source: urlParams.get("utm_source") || "test",
+      utm_source: urlParams.utm_source || "test",
       utm_medium: urlParams.utm_medium_value_from_url || "",
       utm_campaign: urlParams.utm_campaign_value_from_url || "",
       utm_term: urlParams.utm_term_value_from_url || "",
