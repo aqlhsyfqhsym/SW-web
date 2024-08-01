@@ -1584,7 +1584,6 @@ function getQueryParams(url) {
       pair = (pair + "=").split("=").map(decodeURIComponent);
       if (pair[0].length) {
         params[pair[0]] = pair[1];
-        console.log(`Key: ${pair[0]}, Value: ${pair[1]}`);
       }
     });
   return params;
