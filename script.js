@@ -67,3 +67,29 @@ function downloadPDF() {
 AOS.init({
   duration: 1000,
 });
+
+
+ 
+var isActiveMode = false;
+$(".zoom_image")
+  .on("click", function () {
+    (isActiveMode = !isActiveMode)
+      ? ($(this).addClass("zoom_mode_active"),
+        $(window).width() > 767
+          ? $(this).children("img").css({ transform: "scale(2)" })
+          : $(this).children("img").css({ transform: "scale(5)" }))
+      : ($(this).removeClass("zoom_mode_active"),
+        $(this).children("img").css({ transform: "scale(1)" }));
+  })
+  .on("mousemove", function (e) {
+    $(this)
+      .children("img")
+      .css({
+        "transform-origin":
+          ((e.pageX - $(this).offset().left) / $(this).width()) * 100 +
+          "% " +
+          ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +
+          "%"
+      });
+  });
+
