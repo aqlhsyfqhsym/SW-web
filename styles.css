@@ -1802,18 +1802,13 @@ body {
 }
 
 .container-custom{
-  max-width: 1440px;
+  max-width: 100%;
   margin: auto ;
 }
 
 @media (min-width: 1919px) {
-
-  .container-custom{
-    max-width: 1920px;
-    margin: auto ;
-  }
-
-
+ 
+ 
   .xl\:px-15 {
     padding-left: 10rem !important;
     padding-right: 10rem !important;
@@ -1823,13 +1818,14 @@ body {
     padding: 0px 255px !important;
   }
 }
+ 
 
-
+ 
 /* 2xl */
-@media (min-width: 1536px) {
+@media (min-width: 1536px){
 
   .container-custom{
-    max-width: 1536px;
+    max-width: 1600px;
     margin: auto ;
   }
 
@@ -1859,7 +1855,10 @@ body {
 /* xl  */
 @media (min-width: 1280px) {
 
-
+  /* .container-custom{
+    max-width: 1536px;
+    margin: auto ;
+  } */
 
   .custom-margin {
     margin-left: 24px;
