@@ -1808,6 +1808,10 @@ body {
 
 @media (min-width: 1919px) {
 
+  .container-custom{
+    max-width: 1920px;
+    margin: auto ;
+  }
 
 
   .xl\:px-15 {
@@ -1818,15 +1822,16 @@ body {
   .site-plan {
     padding: 0px 255px !important;
   }
-
-
 }
 
 
 /* 2xl */
 @media (min-width: 1536px) {
 
-
+  .container-custom{
+    max-width: 1536px;
+    margin: auto ;
+  }
 
   .section-subheading {
     width: 66.666667%;
@@ -1854,10 +1859,6 @@ body {
 /* xl  */
 @media (min-width: 1280px) {
 
-  .container-custom{
-    max-width: 1920px !important;
-    margin: auto ;
-  }
 
 
   .custom-margin {
