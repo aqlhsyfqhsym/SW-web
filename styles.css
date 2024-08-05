@@ -1808,6 +1808,11 @@ body {
 
 @media (min-width: 1919px) {
 
+  .container-custom{
+    max-width: 2880px !important;
+    margin: auto ;
+  }
+
 
   .xl\:px-15 {
     padding-left: 10rem !important;
@@ -1854,8 +1859,8 @@ body {
 @media (min-width: 1280px) {
 
   .container-custom{
-    max-width: 2240px;
-  margin: auto ;
+    max-width: 2389px;
+    margin: auto ;
   }
 
   .custom-margin {
