@@ -1796,6 +1796,10 @@ body {
   transition: transform 200ms ease-out;
 }
 
+.container-custom{
+  max-width: 1440px;
+  margin: auto ;
+}
 
 @media (min-width: 1919px) {
 
@@ -1844,6 +1848,11 @@ body {
 /* xl  */
 @media (min-width: 1280px) {
 
+  .container-custom{
+    max-width: 1920px;
+  margin: auto ;
+
+  }
   .custom-margin {
     margin-left: 24px;
       }
