@@ -1809,7 +1809,7 @@ body {
 @media (min-width: 1919px) {
 
   .container-custom{
-    max-width: 2880px !important;
+    max-width: 2560px !important;
     margin: auto ;
   }
 
