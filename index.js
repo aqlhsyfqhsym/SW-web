@@ -1527,8 +1527,9 @@ function populateCountryCodes(countries) {
   $("#country-code-display").val("+60");
 }
 
+//OLD Toast function
 // Show success notification and hide after 5 seconds
-function showSuccessNotification() {
+/*function showSuccessNotification() {
   $("#success-notification")
     .removeClass("-bottom-full opacity-0")
     .addClass("bottom-4 opacity-100");
@@ -1565,6 +1566,42 @@ function hideSubmittingNotification() {
   $("#submitting-notification")
     .removeClass("bottom-4 opacity-100")
     .addClass("-bottom-full opacity-0");
+}*/
+//END of Old Toast
+
+//Initializing toast elements
+const submittingToast = new bootstrap.Toast(
+  document.getElementById("submitnoti")
+);
+const successToast = new bootstrap.Toast(
+  document.getElementById("successnoti")
+);
+const errorToast = new bootstrap.Toast(document.getElementById("errornoti"));
+
+// Show success notification
+function showSuccessNotification() {
+  successToast.show();
+  setTimeout(() => {
+    successToast.hide();
+  }, 5000);
+}
+
+// Show error notification
+function showErrorMessage() {
+  errorToast.show();
+  setTimeout(() => {
+    errorToast.hide();
+  }, 5000);
+}
+
+// Show submitting notification
+function showSubmittingNotification() {
+  submittingToast.show();
+}
+
+// Hide submitting notification
+function hideSubmittingNotification() {
+  submittingToast.hide();
 }
 
 /**
